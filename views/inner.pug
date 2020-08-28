@@ -1,0 +1,109 @@
+extends layout
+
+block content
+    div.page-wrapper.page-inner
+        div.container
+            nav.navbar.navbar-expand-lg.navbar-light.navbar-inner
+                a(class="navbar-brand" href="#") 
+                    img(src="images/logo-inv.png")
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav.mr-auto
+                      li.nav-item
+                        a(class="nav-link" href="#") About
+                      li.nav-item
+                        a(class="nav-link" href="#") Submit bug
+                      li.nav-item
+                        a(class="nav-link" href="#") Q&A
+                      li.nav-item
+                        a(class="nav-link" href="#") Contact
+                    form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")
+                        div(class="div-input")
+                            #error
+                            if error
+                                p.text-danger Zip code is not found!
+                            input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
+                        div(class="top-bar-icon-country dropdown")           
+                            button(class="dropdown-toggle" type="button" data-toggle="dropdown")
+                                img(src="images/flag-us.png")
+                                span.caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="#") 
+                                            img(src="images/flag-us.png")
+                        div(class="top-bar-icon-lang dropdown")         
+                            button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
+                                span.caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="#") ENG 
+
+            div.main-wrapper
+                div.row.row-top
+                    div.col-lg-5
+                      h4 NORTH AMERICA
+                      h2 Chicago,
+                        span IL 60603
+                      p
+                        span 80% reduction
+                        |  in GHGs
+                        span  by 2030
+                        |  from 2000
+                    div.col-lg-7
+                      div.progress
+                        div(class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100") 25%
+                        h6 
+                          strong 75% 
+                          | away from target
+                div.row.row-main
+                    div.col-lg-3.side-img-wrapper
+                      div.side-img
+                        img(src="images/side-placeholder.jpg")
+                    div.col-lg-9
+                      div.results-list
+                        div.row
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                img(src="images/placeholder.png")
+                              div.item-data
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                img(src="images/placeholder.png")
+                              div.item-data
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                img(src="images/placeholder.png")
+                              div.item-data
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                img(src="images/placeholder.png")
+                              div.item-data
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF

@@ -1,18 +1,63 @@
 extends layout
 
 block content
-    div.text-center
-        form(class="form-signin" method="POST" action="/api/v1/contact")
-            div(class="top-bar-icon-lang")
-            div(class="top-bar-icon")
-            div(class="top-bar")
-            div(class="div-input")
-                #error
-                if error
-                    p.text-danger Zip code is not found!
-                input(type="number" class="input" name="zipCode" id="input"  placeholder="Zip code" required autofocus)
-            input(type="image" src="../public/stylesheets/images/button.png" alt="Submit" class="button")
-            div(class="middle-bar")
-            div(class="body-shade1")
-            div(class="body-shade2")   
-            
+    div.page-wrapper
+        div.container
+            nav.navbar.navbar-expand-lg.navbar-light
+                a(class="navbar-brand" href="#") 
+                    img(src="images/logo.png")
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav.mr-auto
+                      li.nav-item
+                        a(class="nav-link" href="#") About
+                      li.nav-item
+                        a(class="nav-link" href="#") Submit bug
+                      li.nav-item
+                        a(class="nav-link" href="#") Q&A
+                      li.nav-item
+                        a(class="nav-link" href="#") Contact
+                    form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")
+                        div(class="div-input")
+                            #error
+                            if error
+                                p.text-danger Zip code is not found!
+                            input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
+                        div(class="top-bar-icon-country dropdown")           
+                            button(class="dropdown-toggle" type="button" data-toggle="dropdown")
+                                img(src="images/flag-us.png")
+                                span.caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="#") 
+                                            img(src="images/flag-us.png")
+                        div(class="top-bar-icon-lang dropdown")         
+                            button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
+                                span.caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="#") ENG 
+                        div(class="middle-bar")
+                        div(class="body-shade1")
+                        div(class="body-shade2") 
+
+            div.main-wrapper
+                div
+                    h3 WHO WE ARE?
+                    h1 
+                       | Climate
+                       span Reps.com 
+                       | is the first 
+                       br
+                       span open climate democracy website.
+                    p 
+                      | Enter your Zip Code and a greenhouse Gas tracker will show
+                      span  your local
+                      br  
+                      span governments’ plans 
+                      | to fight climate change, and what they’ve done so far.
+                    a(class="btn-test" href="#") 
+                      img(src="images/arrow.png") 
+                      |  TEST IT
+                      span  now
