@@ -55,6 +55,9 @@ block content
             td governorPhone
         each contact in data
             tr
+                td.zipCode  #{contact['zipCode']}
+            
+                td.city #{contact['city']}
                 
                 td.county #{contact['county']}
                 
@@ -190,8 +193,8 @@ block content
                 div.row.row-top
                     div.col-lg-5
                       h4 NORTH AMERICA
-                      h2 #{contact['city']},
-                        span #{contact['zipCode']}
+                      h2 Chicago,
+                        span IL 60603
                       p
                         span 80% reduction
                         |  in GHGs
