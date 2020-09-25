@@ -55,10 +55,6 @@ block content
             td governorPhone
         each contact in data
             tr
-                td.zipCode  #{contact['zipCode']}
-            
-                td.city #{contact['city']}
-                
                 td.county #{contact['county']}
                 
                 td.countyFIPS #{contact['countyFIPS']}
@@ -190,6 +186,7 @@ block content
                                         a(href="#") ENG 
 
             div.main-wrapper
+            each contact in data
                 div.row.row-top
                     div.col-lg-5
                       h4 NORTH AMERICA
