@@ -1,12 +1,161 @@
 extends layout
 
 block content
+    table
+        tr
+            th Contact
+        tr
+            td zipCode            
+            td city             
+            td county             
+            td countyFIPS             
+            td stateAcronym            
+            td stateFIPS              
+            td state            
+            td repName             
+            td congressionalDistrict            
+            td repYearElected       
+            td repNextElection          
+            td repEmailAddress             
+            td repOnlineMessgae            
+            td repParty            
+            td repCommitteeAssignment
+            td repAddress
+            td repOfficeRoom        
+            td repTwitter        
+            td repPhone           
+            td senator1Name
+            td senator1YearElected
+            td senator1NextElection
+            td senator1EmailAddress             
+            td senator1OnlineMessgae             
+            td senator1Party             
+            td senator1CommitteeAssignment            
+            td senator1Address            
+            td senator1Twitter            
+            td senator1Phone             
+            td senator2Name            
+            td senator2YearElected             
+            td senator2NextElection             
+            td senator2EmailAddress             
+            td senator2OnlineMessgae             
+            td senator2Party            
+            td senator2CommitteeAssignment            
+            td senator2Address            
+            td senator2Twitter:            
+            td senator2Phone            
+            td governorName
+            td governorYearElected
+            td governorNextElection
+            td governorEmailAddress 
+            td governorOnlineMessgae
+            td governorParty
+            td governorAddress
+            td governorTwitter
+            td governorPhone
+        each contact in data
+            tr
+                td.zipCode  #{contact['zipCode']}
+            
+                td.city #{contact['city']}
+                
+                td.county #{contact['county']}
+                
+                td.countyFIPS #{contact['countyFIPS']}
+                
+                td.countyFIPS #{contact['countyFIPS']}
+            
+                td.stateFIPS #{contact['stateFIPS']}
+                
+                td.state #{contact['state']}
+            
+                td.repName #{contact['repName']}
+                
+                td.congressionalDistrict #{contact['congressionalDistrict']}
+            
+                td.repYearElected #{contact['repYearElected']}
+            
+                td.repNextElection #{contact['repNextElection']}
+            
+                td.repEmailAddress #{contact['repEmailAddress']}
+                
+                td.repOnlineMessgae #{contact['repOnlineMessgae']}
+            
+                td.repParty #{contact['repParty']}
+            
+                td.repCommitteeAssignment #{contact['repCommitteeAssignment']}
+                
+                td.repAddress #{contact['repAddress']}
+                
+                td.repOfficeRoom #{contact['repOfficeRoom']}
+                
+                td.repTwitter #{contact['repTwitter']}
+                
+                td.repPhone #{contact['repPhone']}
+            
+                td.senator1Name #{contact['senator1Name']}
+            
+                td.senator1YearElected #{contact['senator1YearElected']}
+                
+                td.senator1NextElection #{contact['senator1NextElection']}
+                
+                td.senator1EmailAddress #{contact['senator1EmailAddress']}
+                
+                td.senator1OnlineMessgae #{contact['senator1OnlineMessgae']}
+                
+                td.senator1Party #{contact['senator1Party']}
+                
+                td.senator1CommitteeAssignment #{contact['senator1CommitteeAssignment']}
+            
+                td.senator1Address #{contact['senator1Address']}
+            
+                td.senator1Twitter #{contact['senator1Twitter']}
+            
+                td.senator1Phone #{contact['senator1Phone']}
+                
+                td.senator2Name #{contact['senator2Name']}
+            
+                td.senator2YearElected #{contact['senator2YearElected']}
+                
+                td.senator2NextElection #{contact['senator2NextElection']}
+                
+                td.senator2EmailAddress #{contact['senator2EmailAddress']}
+                
+                td.senator2OnlineMessgae #{contact['senator2OnlineMessgae']}
+                
+                td.senator2Party #{contact['senator2Party']}
+                
+                td.senator2CommitteeAssignment #{contact['senator2CommitteeAssignment']}
+            
+                td.senator2Address #{contact['senator2Address']}
+            
+                td.senator2Twitter #{contact['senator2Twitter']}
+            
+                td.senator2Phone #{contact['senator2Phone']}
+            
+                td.governorName #{contact['governorName']}
+            
+                td.governorYearElected #{contact['governorYearElected']}
+                
+                td.governorNextElection #{contact['governorNextElection']}
+                
+                td.governorEmailAddress #{contact['governorEmailAddress']}
+                
+                td.governorOnlineMessgae #{contact['governorOnlineMessgae']}
+            
+                td.governorParty #{contact['governorParty']}
+                
+                td.governorAddress #{contact['governorAddress']}
+                
+                td.governorTwitter #{contact['governorTwitter']}
+            
+                td.governorPhone #{contact['governorPhone']}
     
     div.page-wrapper.page-inner
         div.container
             nav.navbar.navbar-expand-lg.navbar-light.navbar-inner
                 a(class="navbar-brand" href="#") 
-                    img(src="public/images/logo-inv.png")
+                    img(src="images/logo-inv.png")
                 button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
                     span.navbar-toggler-icon
                 div.collapse.navbar-collapse#navbarSupportedContent
@@ -27,25 +176,25 @@ block content
                             input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
                         div(class="top-bar-icon-country dropdown")           
                             button(class="dropdown-toggle" type="button" data-toggle="dropdown")
-                                img(src="public/images/flag-us.png")
+                                img(src="images/flag-us.png")
                                 span.caret
                                 ul.dropdown-menu
                                     li
                                         a(href="#") 
-                                            img(src="public/images/flag-us.png")
+                                            img(src="images/flag-us.png")
                         div(class="top-bar-icon-lang dropdown")         
                             button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
                                 span.caret
                                 ul.dropdown-menu
                                     li
                                         a(href="#") ENG 
-       each contact in data                               
+
             div.main-wrapper
                 div.row.row-top
                     div.col-lg-5
                       h4 NORTH AMERICA
-                      h2 #{contact['city']},
-                        span #{contact['state']} #{contact['zipCode']}  
+                      h2 Chicago,
+                        span IL 60603  
                       p
                         span 80% reduction
                         |  in GHGs
@@ -60,72 +209,51 @@ block content
                 div.row.row-main
                     div.col-lg-3.side-img-wrapper
                       div.side-img
-                        img(src="public/images/side-placeholder.jpg")
+                        img(src="images/side-placeholder.jpg")
                     div.col-lg-9
                       div.results-list
                         div.row
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="public/images/placeholder.png")
+                                img(src="images/placeholder.png")
                               div.item-data
-                                h5 Rep
-                                h4 #{contact['repName']}
-                                p Congressional District: #{contact['congressionalDistrict']}
-                                p Year Elected: #{contact['repYearElected']}
-                                p Next Election: #{contact['repNextElection']}
-                                p Email Address: #{contact['repEmailAddress']}
-                                p Online Msg: #{contact['repOnlineMessgae']}
-                                p Party: #{contact['repParty']}
-                                p Committee Assignment: #{contact['repCommitteeAssignment']}
-                                p Address: #{contact['repAddress']}
-                                p Office: #{contact['repOfficeRoom']}
-                                p Twitter: #{contact['repTwitter']}
-                                p Phone: #{contact['repPhone']}
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="public/images/placeholder.png")
+                                img(src="images/placeholder.png")
                               div.item-data
-                                h5 Senator
-                                h4 #{contact['senator1Name']}
-                                p Year Elected: #{contact['senator1YearElected']}
-                                p Next Election: #{contact['senator1NextElection']}
-                                p Email Adress: #{contact['senator1EmailAddress']}
-                                p Online Msg: #{contact['senator1OnlineMessgae']}
-                                p Party: #{contact['senator1Party']}
-                                p Committee Assignment: #{contact['senator1CommitteeAssignment']}
-                                p Address: #{contact['senator1Address']}
-                                p twitter: #{contact['senator1Twitter']}
-                                p Phone: #{contact['senator1Phone']}
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="public/images/placeholder.png")
+                                img(src="images/placeholder.png")
                               div.item-data
-                                h5 Senator
-                                h4 #{contact['senator2Name']}
-                                p Year Elected: #{contact['senator2YearElected']}
-                                p Next Election: #{contact['senator2NextElection']}
-                                p Email Adress: #{contact['senator2EmailAddress']}
-                                p Online Msg: #{contact['senator2OnlineMessgae']}
-                                p Party: #{contact['senator2Party']}
-                                p Committee Assignment: #{contact['senator2CommitteeAssignment']}
-                                p Address: #{contact['senator2Address']}
-                                p twitter: #{contact['senator2Twitter']}
-                                p Phone: #{contact['senator2Phone']}
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="public/images/placeholder.png")
+                                img(src="images/placeholder.png")
                               div.item-data
-                                h5 Gobernor
-                                h4 #{contact['governorName']}
-                                p Year Elected: #{contact['governorYearElected']}
-                                p Next Election: #{contact['governorNextElection']}
-                                p Email Adress: #{contact['governorEmailAddress']}
-                                p Online Msg: #{contact['governorOnlineMessgae']}
-                                p Party: #{contact['governorParty']}
-                                p Address: #{contact['governorAddress']}
-                                p twitter: #{contact['governorTwitter']}
-                                p Phone: #{contact['governorPhone']}          
+                                h5 Mayor.Fake City.NY
+                                h4 Stacey Fakename
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
