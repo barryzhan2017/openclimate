@@ -1,151 +1,6 @@
 extends layout
 
 block content
-    table
-        tr
-            th Contact
-        tr
-            td zipCode            
-            td city             
-            td county             
-            td countyFIPS             
-            td stateAcronym            
-            td stateFIPS              
-            td state            
-            td repName             
-            td congressionalDistrict            
-            td repYearElected       
-            td repNextElection          
-            td repEmailAddress             
-            td repOnlineMessgae            
-            td repParty            
-            td repCommitteeAssignment
-            td repAddress
-            td repOfficeRoom        
-            td repTwitter        
-            td repPhone           
-            td senator1Name
-            td senator1YearElected
-            td senator1NextElection
-            td senator1EmailAddress             
-            td senator1OnlineMessgae             
-            td senator1Party             
-            td senator1CommitteeAssignment            
-            td senator1Address            
-            td senator1Twitter            
-            td senator1Phone             
-            td senator2Name            
-            td senator2YearElected             
-            td senator2NextElection             
-            td senator2EmailAddress             
-            td senator2OnlineMessgae             
-            td senator2Party            
-            td senator2CommitteeAssignment            
-            td senator2Address            
-            td senator2Twitter:            
-            td senator2Phone            
-            td governorName
-            td governorYearElected
-            td governorNextElection
-            td governorEmailAddress 
-            td governorOnlineMessgae
-            td governorParty
-            td governorAddress
-            td governorTwitter
-            td governorPhone
-        each contact in data
-            tr
-                td.county #{contact['county']}
-                
-                td.countyFIPS #{contact['countyFIPS']}
-                
-                td.countyFIPS #{contact['countyFIPS']}
-            
-                td.stateFIPS #{contact['stateFIPS']}
-                
-                td.state #{contact['state']}
-            
-                td.repName #{contact['repName']}
-                
-                td.congressionalDistrict #{contact['congressionalDistrict']}
-            
-                td.repYearElected #{contact['repYearElected']}
-            
-                td.repNextElection #{contact['repNextElection']}
-            
-                td.repEmailAddress #{contact['repEmailAddress']}
-                
-                td.repOnlineMessgae #{contact['repOnlineMessgae']}
-            
-                td.repParty #{contact['repParty']}
-            
-                td.repCommitteeAssignment #{contact['repCommitteeAssignment']}
-                
-                td.repAddress #{contact['repAddress']}
-                
-                td.repOfficeRoom #{contact['repOfficeRoom']}
-                
-                td.repTwitter #{contact['repTwitter']}
-                
-                td.repPhone #{contact['repPhone']}
-            
-                td.senator1Name #{contact['senator1Name']}
-            
-                td.senator1YearElected #{contact['senator1YearElected']}
-                
-                td.senator1NextElection #{contact['senator1NextElection']}
-                
-                td.senator1EmailAddress #{contact['senator1EmailAddress']}
-                
-                td.senator1OnlineMessgae #{contact['senator1OnlineMessgae']}
-                
-                td.senator1Party #{contact['senator1Party']}
-                
-                td.senator1CommitteeAssignment #{contact['senator1CommitteeAssignment']}
-            
-                td.senator1Address #{contact['senator1Address']}
-            
-                td.senator1Twitter #{contact['senator1Twitter']}
-            
-                td.senator1Phone #{contact['senator1Phone']}
-                
-                td.senator2Name #{contact['senator2Name']}
-            
-                td.senator2YearElected #{contact['senator2YearElected']}
-                
-                td.senator2NextElection #{contact['senator2NextElection']}
-                
-                td.senator2EmailAddress #{contact['senator2EmailAddress']}
-                
-                td.senator2OnlineMessgae #{contact['senator2OnlineMessgae']}
-                
-                td.senator2Party #{contact['senator2Party']}
-                
-                td.senator2CommitteeAssignment #{contact['senator2CommitteeAssignment']}
-            
-                td.senator2Address #{contact['senator2Address']}
-            
-                td.senator2Twitter #{contact['senator2Twitter']}
-            
-                td.senator2Phone #{contact['senator2Phone']}
-            
-                td.governorName #{contact['governorName']}
-            
-                td.governorYearElected #{contact['governorYearElected']}
-                
-                td.governorNextElection #{contact['governorNextElection']}
-                
-                td.governorEmailAddress #{contact['governorEmailAddress']}
-                
-                td.governorOnlineMessgae #{contact['governorOnlineMessgae']}
-            
-                td.governorParty #{contact['governorParty']}
-                
-                td.governorAddress #{contact['governorAddress']}
-                
-                td.governorTwitter #{contact['governorTwitter']}
-            
-                td.governorPhone #{contact['governorPhone']}
     
     div.page-wrapper.page-inner
         div.container
@@ -191,7 +46,7 @@ block content
                     div.col-lg-5
                       h4 NORTH AMERICA
                       h2 #{contact['city']},
-                        span #{contact['zipCode']}  
+                        span #{contact['state']} #{contact['zipCode']}  
                       p
                         span 80% reduction
                         |  in GHGs
@@ -215,12 +70,18 @@ block content
                               div.item-img
                                 img(src="public/images/placeholder.png")
                               div.item-data
-                                h5 Mayor.Fake City.NY
-                                h4 Stacey Fakename
-                                p 23-444-4444
-                                p stacey.fakename@loremipsum.com
-                                p https://staceyfakename.com
-                                p @staceyF
+                                h5 Congressional District: #{contact['congressionalDistrict']}
+                                h4 #{contact['repName']}
+                                p Year Elected: #{contact['repYearElected']}
+                                p Next Election: #{contact['repNextElection']}
+                                p Email Address: #{contact['repEmailAddress']}
+                                p Online Msg: #{contact['repOnlineMessgae']}
+                                p Party: #{contact['repParty']}
+                                p Committee Assignment: #{contact['repCommitteeAssignment']}
+                                p Address: #{contact['repAddress']}
+                                p Office: #{contact['repOfficeRoom']}
+                                p Twitter: #{contact['repTwitter']}
+                                p Phone: #{contact['repPhone']}
                           div.col-lg-6
                             div.col-item
                               div.item-img
