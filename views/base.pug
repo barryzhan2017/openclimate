@@ -194,7 +194,8 @@ block content
                     div.col-lg-5
                       h4 NORTH AMERICA
                       h2 Chicago,
-                        span IL 60603
+                      each contact in data 
+                        span #{contact['zipCode']}
                       p
                         span 80% reduction
                         |  in GHGs
