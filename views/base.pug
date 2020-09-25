@@ -41,7 +41,6 @@ block content
                                         a(href="#") ENG 
 
             div.main-wrapper
-            each contact in data
                 div.row.row-top
                     div.col-lg-5
                       h4 NORTH AMERICA
@@ -65,6 +64,7 @@ block content
                     div.col-lg-9
                       div.results-list
                         div.row
+                        each contact in data
                           div.col-lg-6
                             div.col-item
                               div.item-img
@@ -83,6 +83,7 @@ block content
                                 p Office: #{contact['repOfficeRoom']}
                                 p Twitter: #{contact['repTwitter']}
                                 p Phone: #{contact['repPhone']}
+                         each contact in data
                           div.col-lg-6
                             div.col-item
                               div.item-img
