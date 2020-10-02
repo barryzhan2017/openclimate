@@ -37,19 +37,15 @@ block content
                                 img(src="images/placeholder.png")
                               div.item-data
                                 h5 Mayor.Fake City.NY
-                               if contact.repName
-                                h4= contact.repName
-                               else if contact.senator1Name
-                                h4= contact.senator1Name
-                               else if contact.senator2Name
-                                h4= contact.senator2Name
-                               else if contact.governorName
-                                h4= contact.governorName
-                               else if contact.mayorName
-                                h4= contact.mayorName
-                                p 23-444-4444
-                                p stacey.fakename@loremipsum.com
-                                p https://staceyfakename.com
-                                p @staceyF
-                         each value, key in data
-                          li= `${key}: ${value}`
+                                if contact.repName
+                                  h4= contact.repName
+                                else if contact.senator1Name
+                                  h4= contact.senator1Name
+                                else if contact.senator2Name
+                                  h4= contact.senator2Name
+                                else if contact.governorName
+                                  h4= contact.governorName
+                                else if contact.mayorName
+                                  h4= contact.mayorName
+                                else
+                                  h4 no
