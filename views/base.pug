@@ -37,7 +37,7 @@ block content
                                 img(src="images/placeholder.png")
                               div.item-data
                                 h5 Rep.
-                                 = `${contact.city} ${contact.stateAcronym}`
+                                 = `${contact.city}.${contact.stateAcronym}`
                                 h4= contact.repName
                                 p Congressional District: 
                                  =  contact.congressionalDistrict
@@ -45,14 +45,11 @@ block content
                                  =  contact.repYearElected
                                 p Next Election: 
                                  =  contact.repNextElection
-                                p Party:
+                                p Party: 
                                  =  contact.repParty
-                                p repCommitteeAssignment
+                                p  Committee Assignment: 
                                  =  contact.repCommitteeAssignment
-                                p repOfficeRoom
+                                p  Office Room: 
                                  =  contact.repOfficeRoom
-                                p repPhone
+                                p  Phone: 
                                  =  contact.repPhone
-                                p repPhone
-                                 =  contact.repPhone
-
