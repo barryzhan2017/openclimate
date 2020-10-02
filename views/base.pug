@@ -30,22 +30,12 @@ block content
                     div.col-lg-9
                       div.results-list
                         div.row
-                         each contact in data
+                         each contact, key in data
                           div.col-lg-6
                             div.col-item
                               div.item-img
                                 img(src="images/placeholder.png")
                               div.item-data
                                 h5 Mayor.Fake City.NY
-                                if contact.repName
-                                  h4= contact.repName
-                                else if contact.senator1Name
-                                  h4= contact.senator1Name
-                                else if contact.senator2Name
-                                  h4= contact.senator2Name
-                                else if contact.governorName
-                                  h4= contact.governorName
-                                else if contact.mayorName
-                                  h4= contact.mayorName
-                                else
-                                  h4 no
+                                h4= contact.repName
+                                p= `${key}: ${contact.congressionalDistrict}`
