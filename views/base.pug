@@ -30,7 +30,7 @@ block content
                     div.col-lg-9
                       div.results-list
                         div.row
-                         each contact, key in data
+                         each contact in data
                           div.col-lg-6
                             div.col-item
                               div.item-img
@@ -38,5 +38,6 @@ block content
                               div.item-data
                                 h5 Mayor.Fake City.NY
                                 h4= contact.repName
-                                each value, key in contact
-                                 p= `${key}: ${value}`
+                                p Congressional District:
+                                 = contact.congressionalDistrict
+
