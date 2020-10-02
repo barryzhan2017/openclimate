@@ -10,6 +10,17 @@ block content
                       h4 NORTH AMERICA
                     each contact in data
                       h2 #{contact['city']},
+                       span #{contact['zip']}
                       - break
-                      test
+                      p
+                        span 80% reduction
+                        |  in GHGs
+                        span  by 2030
+                        |  from 2000
+                    div.col-lg-7
+                      div.progress
+                        div(class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100") 25%
+                        h6 
+                          strong 75% 
+                          | away from target
                       
