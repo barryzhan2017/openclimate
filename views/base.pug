@@ -8,7 +8,7 @@ block content
                 div.row.row-top
                     div.col-lg-5
                       h4 NORTH AMERICA
-                      h2 Chicago,
+                      h2 #{contact['city']},
                         span IL 60603  
                       p
                         span 80% reduction
@@ -28,8 +28,6 @@ block content
                     div.col-lg-9
                       div.results-list
                         div.row
-                        each value, key in data
-                            div= `${key}: ${value}`
                             div.col-lg-6
                                 div.col-item
                                 div.item-img
