@@ -37,7 +37,11 @@ block content
                                 img(src="images/placeholder.png")
                               div.item-data
                                 h5 Mayor.Fake City.NY
-                                h4 #{contact['repName']}
+                                h4 
+                                   if contact.repName
+                                     =contact.repName
+                                   else
+                                      no
                                 p 23-444-4444
                                 p stacey.fakename@loremipsum.com
                                 p https://staceyfakename.com
