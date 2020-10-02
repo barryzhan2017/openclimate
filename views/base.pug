@@ -38,4 +38,5 @@ block content
                               div.item-data
                                 h5 Mayor.Fake City.NY
                                 h4= contact.repName
-                                p= `${key}: ${contact.congressionalDistrict}`
+                                each value, key in contact
+                                 p= `${key}: ${value}`
