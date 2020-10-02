@@ -36,8 +36,23 @@ block content
                               div.item-img
                                 img(src="images/placeholder.png")
                               div.item-data
-                                h5 Mayor.Fake City.NY
+                                h5 Rep.
+                                 = `${contact.city} ${contact.stateAcronym}`
                                 h4= contact.repName
-                                p Congressional District:
-                                 = contact.congressionalDistrict
+                                p Congressional District: 
+                                 =  contact.congressionalDistrict
+                                p Year Elected: 
+                                 =  contact.repYearElected
+                                p Next Election: 
+                                 =  contact.repNextElection
+                                p Party:
+                                 =  contact.repParty
+                                p repCommitteeAssignment
+                                 =  contact.repCommitteeAssignment
+                                p repOfficeRoom
+                                 =  contact.repOfficeRoom
+                                p repPhone
+                                 =  contact.repPhone
+                                p repPhone
+                                 =  contact.repPhone
 
