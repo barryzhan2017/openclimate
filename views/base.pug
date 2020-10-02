@@ -23,5 +23,22 @@ block content
                         h6 
                           strong 75% 
                           | away from target
-                    each contact in data
-                      h2 #{contact['repName']}
+                div.row.row-main
+                    div.col-lg-3.side-img-wrapper
+                      div.side-img
+                        img(src="images/side-placeholder.jpg")
+                    div.col-lg-9
+                      div.results-list
+                        div.row
+                        each contact in data
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                img(src="images/placeholder.png")
+                              div.item-data
+                                h5 Mayor.Fake City.NY
+                                h4 #{contact['repName']}
+                                p 23-444-4444
+                                p stacey.fakename@loremipsum.com
+                                p https://staceyfakename.com
+                                p @staceyF
