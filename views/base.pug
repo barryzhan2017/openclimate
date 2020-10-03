@@ -8,10 +8,10 @@ block content
                 div.row.row-top
                     div.col-lg-5
                       h4 NORTH AMERICA
-                      h2 Chicago,
-                        span IL 60603
                       each contact in data
-                       p #{contact['city']}
+                       h2 #{contact['city']},
+                         span #{contact.stateAcronym} #{contact.zipCode}
+                       p #{contact['mayorGHGTarget']}
                         - break
                     div.col-lg-7
                       div.progress
