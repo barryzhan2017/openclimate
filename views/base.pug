@@ -13,7 +13,7 @@ block content
                        span #{contact['zipCode']}
                       - break
                      each contact in data
-                      p= contact.mayorGHGTarget
+                      p #{contact['mayorGHGTarget']}
                       - break
                     div.col-lg-7
                       div.progress
@@ -45,20 +45,19 @@ block content
                                  =  contact.repNextElection
                                 p Party: 
                                  =  contact.repParty
-                                p  Committee Assignment: 
+                                p Committee Assignment: 
                                  =  contact.repCommitteeAssignment
-                                p  Office Room: 
+                                p Office Room: 
                                  =  contact.repOfficeRoom
-                                p  Address: 
+                                p Address: 
                                  =  contact.repAddress
-                                p  Email:
+                                p Email:
                                  =  contact.repEmailAddress
-                                p   Online Message: 
+                                p Online Message: 
                                  =  contact.repOnlineMessgae
-                                p   Online Message: 
+                                p Online Message: 
                                  =  contact.repOnlineMessage
-                                p   Twitter: 
+                                p Twitter: 
                                  =  contact.prepTwitter
-                                p  Phone: 
+                                p Phone: 
                                  =  contact.repPhone
-                                
