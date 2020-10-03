@@ -26,7 +26,7 @@ block content
                 div.row.row-main
                     div.col-lg-3.side-img-wrapper
                       div.side-img
-                        img(src="../../images/side-placeholder.jpg")
+                        img(src="../../public/images/side-placeholder.jpg")
                     div.col-lg-9
                       div.results-list
                         div.row
@@ -34,7 +34,7 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="images/placeholder.png")
+                                img(src="../../public/images/placeholder.png")
                               div.item-data
                                 h5 Rep.
                                  = `${contact.city}.${contact.stateAcronym}`
@@ -51,5 +51,16 @@ block content
                                  =  contact.repCommitteeAssignment
                                 p  Office Room: 
                                  =  contact.repOfficeRoom
+                                p  Address: 
+                                 =  contact.repAddress
+                                p  Email:
+                                 =  contact.repEmailAddress
+                                p   Online Message: 
+                                 =  contact.repOnlineMessgae
+                                p   Online Message: 
+                                 =  contact.repOnlineMessage
+                                p   Twitter: 
+                                 =  contact.prepTwitter
                                 p  Phone: 
                                  =  contact.repPhone
+                                
