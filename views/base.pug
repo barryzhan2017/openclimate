@@ -8,15 +8,13 @@ block content
                 div.row.row-top
                     div.col-lg-5
                       h4 NORTH AMERICA
-                    each contact in data
+                     each contact in data
                       h2 #{contact['city']},
                        span #{contact['zipCode']}
                       - break
-                      p
-                        span 80% reduction
-                        |  in GHGs
-                        span  by 2030
-                        |  from 2000
+                     each contact in data
+                      p= contact.mayorGHGTarget
+                      - break
                     div.col-lg-7
                       div.progress
                         div(class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100") 25%
