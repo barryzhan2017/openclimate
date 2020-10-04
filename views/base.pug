@@ -57,7 +57,7 @@ block content
                                  =  contact.prepTwitter
                                 p Phone: 
                                  =  contact.repPhone
-                         for item in data
+                         for contact in data
                           h1 test
                           div.col-lg-6
                             div.col-item
@@ -65,8 +65,8 @@ block content
                                 img(src="../../public/images/placeholder.png")
                               div.item-data
                                 h5 Senator.
-                                 = `${item.city}.${item.stateAcronym}`
-                                h4= item.senator1Name
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.senator1Name
                                 p Year Elected: 
                                  =  contact.senator1YearElected
                                 p Next Election: 
