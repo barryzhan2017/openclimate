@@ -150,6 +150,33 @@ const contactSchema = new mongoose.Schema(
     governorPhone: {
       type: String
     },
+    mayorName: {
+      type: String
+    },
+    mayorYearElected: {
+      type: String
+    },
+    mayorNextElection: {
+      type: String
+    },
+    mayorEmailAddress: {
+      type: String
+    },
+    mayorOnlineMessgae: {
+      type: String
+    },
+    mayorParty: {
+      type: String
+    },
+    mayorAddress: {
+      type: String
+    },
+    mayorTwitter: {
+      type: String
+    },
+    mayorPhone: {
+      type: String
+    },
     createdAt: {
       type: Date,
       default: Date.now()
