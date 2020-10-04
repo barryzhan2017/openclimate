@@ -161,4 +161,7 @@ block content
                                 p Twitter: 
                                  =  contact.mayorTwitter
                                 p Phone: 
-                                 =  contact.mayorPhone    
+                                 =  contact.mayorPhone
+                         each value, key in data
+                          h1= value.mayorName
+                          h2= value.governorName
