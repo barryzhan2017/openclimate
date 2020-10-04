@@ -11,7 +11,7 @@ block content
                       each contact in data
                        h2 #{contact['city']},
                          span #{contact.stateAcronym} #{contact.zipCode}
-                         p contact.statePicture
+                         p= contact.statePicture
                        p= contact.mayorGHGTarget
                         - break
                     div.col-lg-6
