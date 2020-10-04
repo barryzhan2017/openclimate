@@ -27,6 +27,9 @@ const contactSchema = new mongoose.Schema(
       type: String,
       required: [true, "A contact must have a state"]
     },
+    statePicture: {
+      type: String
+    },
     repName: {
       type: String
     },
