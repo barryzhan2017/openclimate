@@ -42,7 +42,7 @@ const contactSchema = new mongoose.Schema(
     repEmailAddress: {
       type: String
     },
-    repOnlineMessgae: {
+    repOnlineMessaging: {
       type: String
     },
     repParty: {
@@ -75,7 +75,7 @@ const contactSchema = new mongoose.Schema(
     senator1EmailAddress: {
       type: String
     },
-    senator1OnlineMessgae: {
+    senator1OnlineMessaging: {
       type: String
     },
     senator1Party: {
@@ -105,7 +105,7 @@ const contactSchema = new mongoose.Schema(
     senator2EmailAddress: {
       type: String
     },
-    senator2OnlineMessgae: {
+    senator2OnlineMessaging: {
       type: String
     },
     senator2Party: {
@@ -135,7 +135,7 @@ const contactSchema = new mongoose.Schema(
     governorEmailAddress: {
       type: String
     },
-    governorOnlineMessgae: {
+    governorOnlineMessaging: {
       type: String
     },
     governorParty: {
@@ -150,6 +150,12 @@ const contactSchema = new mongoose.Schema(
     governorPhone: {
       type: String
     },
+    governorGHGTarget: {
+      type: Number
+    },
+    governorGHGCurrent: {
+      type: Number
+    },
     mayorName: {
       type: String
     },
@@ -162,7 +168,7 @@ const contactSchema = new mongoose.Schema(
     mayorEmailAddress: {
       type: String
     },
-    mayorOnlineMessgae: {
+    mayorOnlineMessaging: {
       type: String
     },
     mayorParty: {
@@ -175,6 +181,9 @@ const contactSchema = new mongoose.Schema(
       type: String
     },
     mayorPhone: {
+      type: String
+    },
+    mayorGHGTarget: {
       type: String
     },
     createdAt: {
