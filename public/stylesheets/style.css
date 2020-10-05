@@ -21,6 +21,10 @@ a {
     height: 100vh;
 }
 
+.navbar {
+    padding: 0;
+}
+
 .navbar-brand{
 	padding-right: 60px;
 }
@@ -93,6 +97,7 @@ nav input.input:focus {
 }
 
 .ninner{
+padding-top:20px;
 padding-bottom:40px;
 }
 
