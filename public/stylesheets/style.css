@@ -1,6 +1,6 @@
 body {
   font: 14px "Roboto", Helvetica, Arial, sans-serif;
-  background-color:#d2d2d2;
+  background-color:#ffffff;
 
 }
 
@@ -90,6 +90,10 @@ nav input.input:focus {
     width: 70px;
     background-color: transparent;
     min-width: auto;
+}
+
+.ninner{
+padding-bottom:40px;
 }
 
 button:focus {
