@@ -7,45 +7,6 @@ html
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap")
   body
     block content
-         div.container
-            nav.navbar.navbar-expand-lg.navbar-light
-                a(class="navbar-brand" href="#") 
-                    img(src="public/images/Logo.png")
-                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
-                    span.navbar-toggler-icon
-                div.collapse.navbar-collapse#navbarSupportedContent
-                    ul.navbar-nav.mr-auto
-                      li.nav-item
-                        a(class="nav-link" href="#") About
-                      li.nav-item
-                        a(class="nav-link" href="#") Submit bug
-                      li.nav-item
-                        a(class="nav-link" href="#") Q&A
-                      li.nav-item
-                        a(class="nav-link" href="#") Contact
-                    form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")
-                        div(class="div-input")
-                            #error
-                            if error
-                                p.text-danger Zip code is not found!
-                            input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
-                        div(class="top-bar-icon-country dropdown")           
-                            button(class="dropdown-toggle" type="button" data-toggle="dropdown")
-                                img(src="public/images/flag-us.png")
-                                span.caret
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#") 
-                                            img(src="public/images/flag-us.png")
-                        div(class="top-bar-icon-lang dropdown")         
-                            button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
-                                span.caret
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#") ENG 
-                        div(class="middle-bar")
-                        div(class="body-shade1")
-                        div(class="body-shade2") 
 
   script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
