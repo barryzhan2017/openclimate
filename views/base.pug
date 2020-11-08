@@ -35,6 +35,10 @@ block content
                               div.item-data
                                 h5 Rep.
                                  = `${contact.city}.${contact.stateAcronym}`
+                                if contact.repPicture
+                                  h4 YES IMAGE TEST
+                                else
+                                  h4 NO IMAGE TEST
                                 h4= contact.repPicture
                                 p Congressional District: 
                                  =  contact.congressionalDistrict
