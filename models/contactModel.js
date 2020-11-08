@@ -63,7 +63,7 @@ const contactSchema = new mongoose.Schema(
     repPhone: {
       type: String
     },
-    repPicure: {
+    repPicture: {
       type: String
     },
     senator1Name: {
@@ -96,7 +96,7 @@ const contactSchema = new mongoose.Schema(
     senator1Phone: {
       type: String
     },
-    senator1Picure: {
+    senator1Picture: {
       type: String
     },
     senator2Name: {
@@ -129,7 +129,7 @@ const contactSchema = new mongoose.Schema(
     senator2Phone: {
       type: String
     },
-    senator2Picure: {
+    senator2Picture: {
       type: String
     },
     governorName: {
@@ -165,7 +165,7 @@ const contactSchema = new mongoose.Schema(
     governorGHGCurrent: {
       type: Number
     },
-    governorPicure: {
+    governorPicture: {
       type: String
     },
     mayorName: {
