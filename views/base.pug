@@ -31,15 +31,14 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                h4= contact.repName
-                              div.item-data
-                                h5 Rep.
-                                 = `${contact.city}.${contact.stateAcronym}`
                                 if contact.repPicture
                                   h4 YES IMAGE TEST
                                 else
                                   h4 NO IMAGE TEST
-                                h4= contact.repPicture
+                              div.item-data
+                                h5 Rep.
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.repName
                                 p Congressional District: 
                                  =  contact.congressionalDistrict
                                 p Year Elected: 
@@ -66,11 +65,14 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="../../public/images/placeholder.png")
+                                if contact.senator1Picture
+                                  h4 YES IMAGE TEST
+                                else
+                                  h4 NO IMAGE TEST
                               div.item-data
                                 h5 Senator.
                                  = `${contact.city}.${contact.stateAcronym}`
-                                h4= contact.senator1Picture
+                                h4= contact.senator1Name
                                 p Year Elected: 
                                  =  contact.senator1YearElected
                                 p Next Election: 
@@ -92,7 +94,10 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="../../public/images/placeholder.png")
+                                if contact.senator2Picture
+                                  h4 YES IMAGE TEST
+                                else
+                                  h4 NO IMAGE TEST
                               div.item-data
                                 h5 Senator.
                                  = `${contact.city}.${contact.stateAcronym}`
@@ -118,7 +123,10 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="../../public/images/placeholder.png")
+                                if contact.governorPicture
+                                  h4 YES IMAGE TEST
+                                else
+                                  h4 NO IMAGE TEST
                               div.item-data
                                 h5 Governor.
                                  = `${contact.city}.${contact.stateAcronym}`
@@ -144,7 +152,10 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                img(src="../../public/images/placeholder.png")
+                                if contact.mayorPicture
+                                  h4 YES IMAGE TEST
+                                else
+                                  h4 NO IMAGE TEST
                               div.item-data
                                 h5 Mayor.
                                  = `${contact.city}.${contact.stateAcronym}`
