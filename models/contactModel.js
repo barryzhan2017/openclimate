@@ -69,6 +69,9 @@ const contactSchema = new mongoose.Schema(
     senator1Name: {
       type: String
     },
+    senator1Picture: {
+      type: String
+    },
     senator1YearElected: {
       type: String
     },
