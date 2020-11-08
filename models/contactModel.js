@@ -105,6 +105,9 @@ const contactSchema = new mongoose.Schema(
     senator2Name: {
       type: String
     },
+    senator2Picture: {
+      type: String
+    },
     senator2YearElected: {
       type: String
     },
@@ -133,6 +136,9 @@ const contactSchema = new mongoose.Schema(
       type: String
     },
     governorName: {
+      type: String
+    },
+    governorPicture: {
       type: String
     },
     governorYearElected: {
@@ -166,6 +172,9 @@ const contactSchema = new mongoose.Schema(
       type: Number
     },
     mayorName: {
+      type: String
+    },
+    mayorPicture: {
       type: String
     },
     mayorYearElected: {
