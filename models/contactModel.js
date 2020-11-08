@@ -23,6 +23,9 @@ const contactSchema = new mongoose.Schema(
     stateFIPS: {
       type: Number
     },
+    statePicture: {
+      type: String
+    },
     state: {
       type: String,
       required: [true, "A contact must have a state"]
