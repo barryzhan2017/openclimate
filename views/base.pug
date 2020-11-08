@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    include inner
+    include inner.pug
     div.page-wrapper.page-inner
         div.container
             div.main-wrapper
@@ -11,7 +11,8 @@ block content
                       each contact in data
                        h2 #{contact['city']},
                          span #{contact.stateAcronym} #{contact.zipCode}
-                         p= contact.mayorGHGTarget
+                         p= contact.statePicture
+                       p= contact.mayorGHGTarget
                         - break
                     div.col-lg-6
                       div.progress
@@ -26,6 +27,37 @@ block content
                     div.col-lg-9
                       div.results-list
                         div.row
+                         each contact in data
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                img(src="../../public/images/placeholder.png")
+                              div.item-data
+                                h5 Rep.
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.repName
+                                p Congressional District: 
+                                 =  contact.congressionalDistrict
+                                p Year Elected: 
+                                 =  contact.repYearElected
+                                p Next Election: 
+                                 =  contact.repNextElection
+                                p Party: 
+                                 =  contact.repParty
+                                p Committee Assignment: 
+                                 =  contact.repCommitteeAssignment
+                                p Office Room: 
+                                 =  contact.repOfficeRoom
+                                p Address: 
+                                 =  contact.repAddress
+                                p Email:
+                                 =  contact.repEmailAddress
+                                p Online Message: 
+                                 =  contact.repOnlineMessaging
+                                p Twitter: 
+                                 =  contact.prepTwitter
+                                p Phone: 
+                                 =  contact.repPhone
                          each contact in data
                           div.col-lg-6
                             div.col-item
