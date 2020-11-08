@@ -24,7 +24,7 @@ const contactSchema = new mongoose.Schema(
       type: Number
     },
     statePicture: {
-      type: String
+      type: Object
     },
     state: {
       type: String,
