@@ -63,6 +63,9 @@ const contactSchema = new mongoose.Schema(
     repPhone: {
       type: String
     },
+    repPicture: {
+      type: String
+    },
     senator1Name: {
       type: String
     },
