@@ -30,7 +30,7 @@ const contactSchema = new mongoose.Schema(
     repName: {
       type: String
     },
-    repPicture: {
+    repPic: {
       type: String
     },
     congressionalDistrict: {
