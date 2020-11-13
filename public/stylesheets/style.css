@@ -20,9 +20,14 @@ a {
 
 .navbar-wrapper {
     width: 100%;
-    height: 90px;
-    padding-top: 8px;
     border-bottom: 1px solid #262729;
+}
+
+.navbar-nav {
+    border-right: 1px solid #262729;
+    height: 80px;
+    padding-top: 24px;
+    padding-right: 30px;
 }
 
 .navbar {
@@ -30,6 +35,7 @@ a {
 }
 
 .navbar-brand{
+	padding-top:0;
 	padding-right: 60px;
 }
 
@@ -100,6 +106,13 @@ nav input.input:focus {
     min-width: auto;
 }
 
+.top-bar-icon-country.dropdown {
+    padding-right: 30px;
+    border-right: 1px solid #262729;
+    height: 80px;
+    padding-top: 24px;	
+}
+
 .ninner{
 padding-top:20px;
 padding-bottom:40px;
@@ -137,9 +150,13 @@ button:focus {
 }
 
 .top-bar-icon-lang{
-	margin-left: 40px;
+	margin-left: 15px;
 }
-
+form.form-signin.form-inline {
+    height: 80px;
+    border-right: 1px solid #262729;
+    padding-right: 14px;
+}
 
 .main-wrapper{
 
