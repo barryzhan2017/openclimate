@@ -146,7 +146,7 @@ button:focus {
 }
 
 .div-input{
-	margin-left: 40px;
+	margin-left: 0px;
 	margin-right: 10px;
 }
 
@@ -154,7 +154,7 @@ button:focus {
 	margin-left: 15px;
 }
 form.form-signin.form-inline {
-    height: 80px;
+    height: 90px;
     border-right: 1px solid #262729;
     padding-right: 14px;
 }
