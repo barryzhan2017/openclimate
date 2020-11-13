@@ -115,8 +115,12 @@ nav input.input:focus {
 }
 
 .ninner{
-padding-top:20px;
+padding-top:0px;
 padding-bottom:40px;
+}
+
+.ninner .navbar-brand{
+    margin-top: -10px;
 }
 
 button:focus {
@@ -228,6 +232,7 @@ form.form-signin.form-inline {
 .page-inner{
 background-image: none;
 background-color: #fff;
+	margin-top:60px;
 }
 
 
@@ -250,6 +255,11 @@ background-color: #fff;
 .top-bar-icon-country button {
     border: 1px solid #3de2d2;
 }
+
+.nw-inner, .nw-inner .navbar-nav, .nw-inner .top-bar-icon-country.dropdown, .nw-inner form.form-signin.form-inline{
+border-color:#d9d9d9;
+}
+
 
 .row-top{
 	margin-bottom: 50px;
