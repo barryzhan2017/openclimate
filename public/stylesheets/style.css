@@ -21,11 +21,12 @@ a {
 .navbar-wrapper {
     width: 100%;
     border-bottom: 1px solid #262729;
+   height: 90px;	
 }
 
 .navbar-nav {
     border-right: 1px solid #262729;
-    height: 80px;
+    height: 90px;
     padding-top: 24px;
     padding-right: 30px;
 }
@@ -55,7 +56,7 @@ a {
 }
 
 .navbar-expand-lg .navbar-collapse {
-    margin-top: 11px;
+    margin-top: 0px;
 }
 
 nav input.input{
@@ -109,7 +110,7 @@ nav input.input:focus {
 .top-bar-icon-country.dropdown {
     padding-right: 30px;
     border-right: 1px solid #262729;
-    height: 80px;
+    height: 90px;
     padding-top: 24px;	
 }
 
