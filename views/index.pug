@@ -65,15 +65,18 @@ block content
                       |  TEST IT
                       span  now
                     div.panel-search
-                      form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")
+                      form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")                          
                         div(class="div-input")
+                            label.labelsmall Enter your Zip code:
                             #error
                             if error
                                 p.text-danger Zip code is not found!
                             input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
-                        div(class="top-bar-icon-country dropdown")           
+                        div(class="top-bar-icon-country dropdown")
+                            Select your country:
                             button(class="dropdown-toggle" type="button" data-toggle="dropdown")
-                                img(src="../../public/images/flag-us.png")
+                                span United States 
+                                | img(src="../../public/images/flag-us.png")
                                 span.caret
                                 ul.dropdown-menu
                                     li
