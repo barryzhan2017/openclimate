@@ -405,6 +405,13 @@ position: relative;
 }
 
 @media screen and (max-width:767px){
+	.main-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+	.page-wrapper {
+    min-height: 100vh;
+	}
 .navbar-collapse.collapse.show .close-menu-mobile {
     display: flex;
     padding-left: 10px;
