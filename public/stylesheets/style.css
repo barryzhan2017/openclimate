@@ -429,8 +429,9 @@ border-radius: 30px;
     font-size: 15px;
     font-family: Poppins;
     width: 200px;
-line-height: 38px;
+	line-height: 38px;
     color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .panel-search form.form-signin.form-inline {
