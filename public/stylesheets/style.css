@@ -475,6 +475,10 @@ color:#000;
     color: #000!important;
 }
 
+.navbar-inner .top-bar-icon-country button {
+    color: #000!important;
+}
+
 @media screen and (max-width:991px){
 	.container {
     max-width: 100%;
