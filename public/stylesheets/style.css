@@ -395,6 +395,11 @@ position: relative;
     margin-right: 10px;
 }
 
+.navbar-toggler {
+    border: 0;
+    border-radius: 0;
+}
+
 @media screen and (max-width:767px){
 .main-wrapper h1 {
     font-size: 35px;
@@ -407,6 +412,72 @@ position: relative;
 }
 .navbar-light .navbar-toggler-icon {
     background-image: url(../images/menu.png);
-	background-repeat:no-repeat;
+background-repeat:no-repeat;
+}
+.navbar-expand-lg .navbar-collapse {
+    margin-top: 0px;
+    background: #000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100vw;
+    padding-left: 15px;
+    padding-right: 15px;
+	text-align: center;
+	padding-bottom: 35px;
+}
+.navbar-nav {
+    border-right: 0;
+    height: auto;
+    padding-top: 0;
+    padding-right: 0;
+}
+	form.form-signin.form-inline {
+    height: auto;
+    border-right: 0;
+    padding-right: 0;
+}
+	.top-bar-icon-country.dropdown {
+    padding-right: 0;
+    border-right: 0;
+    height: auto;
+    padding-top: 0;
+}
+form.form-signin.form-inline {
+    display: block;
+    border-top: 1px solid #262626;
+    padding-top: 60px;
+    margin-top: 60px!important;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.top-bar-icon-lang {
+        margin-left: -15px;
+    margin-right: -15px;
+    display: block;
+    padding-top: 40px;
+    border-top: 1px solid #262626;
+    margin-top: 60px;
+}
+.div-input {
+    display: inline-block;
+}
+.top-bar-icon-country.dropdown {
+    display: inline-block;
+}	
+	.top-bar-icon-country button {
+    border: 1px solid #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #3de2d2;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+	.navbar-nav {
+    padding-top: 60px;
 	}
 }
