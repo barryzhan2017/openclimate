@@ -409,6 +409,7 @@ position: relative;
     display: flex;
     padding-left: 10px;
     padding-right: 10px;
+    cursor:pointer;
 }
 .menu-opened-close {
 	align-self: center;
