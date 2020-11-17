@@ -404,6 +404,50 @@ position: relative;
   display:none;
 }
 
+.panel-search .top-bar-icon-country button {
+    width: 200px;
+}
+
+.panel-search label.labelsmall {
+    text-align: left;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+	font-size:12px;
+	line-height:15px;
+	font-weight:bold;
+}
+
+.panel-search input, .panel-search .top-bar-icon-country button{
+border-radius: 30px;
+    height: 32px;
+    border: 1px solid #fefefe;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fefefe;
+    font-size: 15px;
+    font-family: Poppins;
+    width: 200px;
+}
+
+.panel-search form.form-signin.form-inline {
+    height: auto;
+}
+
+.panel-search .top-bar-icon-country.dropdown {
+    padding-right: 30px;
+    border-right: 0;
+    height: auto;
+    padding-top: 0;
+}
+
+.panel-search form.form-signin.form-inline {
+    height: auto;
+    border-right: 0;
+    padding-right: 0;
+}
+
 @media screen and (max-width:991px){
 	.container {
     max-width: 100%;
