@@ -417,7 +417,6 @@ background-repeat:no-repeat;
 .navbar-expand-lg .navbar-collapse {
     margin-top: 0px;
     background: #000;
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
