@@ -629,4 +629,16 @@ order:2;
 .ninner .navbar-expand-lg .navbar-collapse {
     padding-top: 25px;
 }
+	.panel-search form.form-signin.form-inline {
+    display: block;
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0px!important;
+    margin-left: 0;
+    margin-right: 0;
+}
+.panel-search .div-input {
+    margin-right: 0;
+    margin-bottom: 20px;
+}
 }
