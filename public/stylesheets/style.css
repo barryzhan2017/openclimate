@@ -564,7 +564,10 @@ order:2;
 .top-bar-icon-country button img {
     width: auto;
 }
-.ninner {
-    padding-top: 27px;
-	}
+.navbar-inner {
+    padding-top: 26px;
+}
+.ninner .navbar-expand-lg .navbar-collapse {
+    padding-top: 25px;
+}
 }
