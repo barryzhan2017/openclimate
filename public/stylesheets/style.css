@@ -390,3 +390,23 @@ position: relative;
 .page-inner .container {
     height: auto;
 }
+
+.btn-test img {
+    margin-right: 10px;
+}
+
+@media screen and (max-width:767px){
+.main-wrapper h1 {
+    font-size: 35px;
+    line-height: 45px;
+}
+.navbar-wrapper {
+    height: auto;
+    padding-top: 20px;
+    max-height: 95px;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../images/menu.png);
+	background-repeat:no-repeat;
+	}
+}
