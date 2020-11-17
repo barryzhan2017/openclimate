@@ -405,6 +405,9 @@ position: relative;
 }
 
 @media screen and (max-width:991px){
+	.container {
+    max-width: 100%;
+}
 	.main-wrapper {
     padding-top: 60px;
     padding-bottom: 60px;
