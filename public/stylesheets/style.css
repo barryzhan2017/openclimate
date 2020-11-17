@@ -420,7 +420,7 @@ position: relative;
 
 .panel-search input, .panel-search .top-bar-icon-country button{
 border-radius: 30px;
-    height: 32px;
+    height: 40px;
     border: 1px solid #fefefe;
     background-color: transparent;
     padding-left: 20px;
@@ -429,6 +429,8 @@ border-radius: 30px;
     font-size: 15px;
     font-family: Poppins;
     width: 200px;
+line-height: 38px;
+    color: #fff;
 }
 
 .panel-search form.form-signin.form-inline {
@@ -440,6 +442,10 @@ border-radius: 30px;
     border-right: 0;
     height: auto;
     padding-top: 0;
+}
+
+.panel-search .div-input {
+    margin-right: 30px;
 }
 
 .panel-search form.form-signin.form-inline {
