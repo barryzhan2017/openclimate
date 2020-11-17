@@ -503,4 +503,7 @@ form.form-signin.form-inline {
 	.navbar-nav {
     padding-top: 60px;
 	}
+	.page-wrapper {
+    height: auto;
+}
 }
