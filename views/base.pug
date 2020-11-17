@@ -32,7 +32,7 @@ block content
                             div.col-item
                               div.item-img
                                 if contact.repPicture
-                                  h4 IMAGE
+                                  = contact.repPicture
                                 else
                                   img(src="../../public/images/placeholder-rep.png")
                               div.item-data
@@ -54,7 +54,7 @@ block content
                                 p Address: 
                                  =  contact.repAddress
                                 p Email:
-                                 a(href= contact.repEmailAddress)
+                                 a(href= `${contact.repEmailAddress}`)
                                 p Online Message: 
                                  =  contact.repOnlineMessaging
                                 p Twitter: 
@@ -84,9 +84,9 @@ block content
                                 p Address: 
                                  =  contact.senator1Address
                                 p Email:
-                                 a(href= contact.senator1EmailAddress)
+                                 a(href= `${contact.senator1EmailAddress}`)
                                 p Online Message: 
-                                 a(href= contact.senator1OnlineMessaging)
+                                 a(href= `${contact.senator1OnlineMessaging}`)
                                 p Twitter: 
                                  =  contact.senator1Twitter
                                 p Phone: 
