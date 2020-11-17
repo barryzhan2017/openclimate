@@ -91,9 +91,11 @@ block content
                                  a(href= `${contact.senator1OnlineMessaging}`)
                                   = contact.senator1OnlineMessaging
                                 p Twitter: 
-                                 =  contact.senator1Twitter
-                                p Phone: 
-                                 =  contact.senator1Phone
+                                 a(href= `${contact.senator1Twitter}`)
+                                  =  contact.senator1Twitter
+                                p Phone:
+                                 a(href= tel:`${contact.senator1Phone}`)
+                                  =  contact.senator1Phone
                           div.col-lg-6
                             div.col-item
                               div.item-img
