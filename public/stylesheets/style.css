@@ -506,4 +506,62 @@ form.form-signin.form-inline {
 	.page-wrapper {
     height: auto;
 }
+.row-main .side-img {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.row-main .side-img img {
+    vertical-align: middle;
+    border-style: none;
+    max-height: none;
+    width: 100%;
+}
+.row-main .side-img-wrapper {
+    position: relative;
+    order: 1;
+    margin-left: -15px;
+}
+.row-main .col-lg-9{
+order:2;
+}
+.row-top h2 {
+    font-size: 35px;
+    line-height: 40px;
+}
+.progress {
+ margin-top: 10px;
+}
+.page-inner {
+    margin-top: 0px;
+}
+.results-list {
+    padding-left: 0;
+}
+.item-data p {
+    word-break: break-all;
+}
+.progress h6 {
+    font-size: 16px;
+    margin-left: 15px;
+}
+.progress-bar {
+    font-size: 16px;
+	}
+.navbar-wrapper.nw-inner {
+    padding-top: 0;
+}
+.navbar-expand-lg .navbar-collapse {
+    z-index: 99;
+}
+.top-bar-icon-country button img {
+    width: auto;
+}
 }
