@@ -459,6 +459,10 @@ border-radius: 30px;
 margin-top:30px;
 }
 
+.panel-search{
+display:none;
+}
+
 @media screen and (max-width:991px){
 	.container {
     max-width: 100%;
