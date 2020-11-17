@@ -71,7 +71,7 @@ block content
                             #error
                             if error
                                 p.text-danger Zip code is not found!
-                            input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
+                            input(type="number" class="input" name="zipCode" id="input"  required autofocus)
                         div(class="top-bar-icon-country dropdown")
                             label.labelsmall Select your country:
                             button(class="dropdown-toggle" type="button" data-toggle="dropdown")
@@ -82,9 +82,3 @@ block content
                                     li
                                         a(href="#") 
                                             img(src="../../public/images/flag-us.png")
-                        div(class="top-bar-icon-lang dropdown")         
-                            button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
-                                span.caret
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#") ENG
