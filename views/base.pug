@@ -63,7 +63,7 @@ block content
                                  a(href= `${contact.prepTwitter}`)
                                   =  contact.prepTwitter
                                 p Phone: 
-                                 a(href= `${contact.repPhone}`)
+                                 a(href= 'tel:'+`${contact.repPhone}`)
                                   =  contact.repPhone
                          each contact in data
                           div.col-lg-6
