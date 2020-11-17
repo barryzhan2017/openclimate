@@ -405,9 +405,15 @@ position: relative;
 }
 
 @media screen and (max-width:767px){
-.navbar-collapse.collapse.show .close-menu-mobile{
-display:block;
-	}
+.navbar-collapse.collapse.show .close-menu-mobile {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.menu-opened-close {
+	align-self: center;
+    margin-left: auto;
+}
 .main-wrapper h1 {
     font-size: 35px;
     line-height: 45px;
