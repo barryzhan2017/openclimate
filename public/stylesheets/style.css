@@ -400,7 +400,14 @@ position: relative;
     border-radius: 0;
 }
 
+.close-menu-mobile{
+  display:none;
+}
+
 @media screen and (max-width:767px){
+.navbar-collapse.collapse.show .close-menu-mobile{
+display:block;
+	}
 .main-wrapper h1 {
     font-size: 35px;
     line-height: 45px;
