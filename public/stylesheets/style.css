@@ -463,6 +463,16 @@ margin-top:30px;
 display:none;
 }
 
+.item-data a{
+color:#3de2d2;
+}
+
+.item-data a:hover{
+color:#000;
+}
+
+
+
 @media screen and (max-width:991px){
 	.container {
     max-width: 100%;
