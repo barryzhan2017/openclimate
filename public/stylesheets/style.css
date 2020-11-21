@@ -384,7 +384,8 @@ position: relative;
 	color: #fff;
 	background: rgb(61,217,225);
 	background: linear-gradient(180deg, rgba(61,217,225,1) 0%, rgba(61,225,211,1) 100%);
-	border-radius: 36px;
+    border-radius: 36px;
+    transition: width .1s ease;
 }
 
 .page-inner .container {
