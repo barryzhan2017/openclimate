@@ -307,14 +307,14 @@ border-color:#d9d9d9;
 }
 
 .row-main .side-img-wrapper{
-position: relative;
+    position: relative;
 }
 
-.row-main .side-img{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 375px;
+.row-main .side-img img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32vw;
 }
 
 .results-list {
