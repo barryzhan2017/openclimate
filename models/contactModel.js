@@ -207,6 +207,12 @@ const contactSchema = new mongoose.Schema(
     createdAt: {
       type: Date,
       default: Date.now()
+    },
+    countryGHGTarget:{
+      type: Number
+    },
+    countryGHGCurrent:{
+      type: Number
     }
   },
   { collection: "contact" }
