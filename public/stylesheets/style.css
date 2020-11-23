@@ -36,8 +36,13 @@ a {
 }
 
 .navbar-brand{
-	padding-top:0;
+    padding-top:0;
 	padding-right: 60px;
+}
+
+.navbar-brand .logo{
+    width: 160px;
+    height: auto;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link{
@@ -366,15 +371,19 @@ position: relative;
 .progress{
 	margin-top: 55px;
 	height: 36px;
-	border-radius: 36px;
+    border-radius: 36px;
+    position: relative;
 }
 
 .progress h6{	
 	float: right;
 	font-family: Poppins;
 	font-size: 18px;
-	align-self: flex-end;
-    margin-left: 150px;
+    align-self: flex-end;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+
 }
 
 .progress-bar{
