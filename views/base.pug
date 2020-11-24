@@ -35,10 +35,7 @@ block content
                             div.col-item
                               div.item-img
                                 if contact.repPicture
-                                 if (contact.repPicture.includes('jpg'))
                                   img(src='../../public/images/'+`${contact.repPicture}`+'.jpg')
-                                 else
-                                  img(src='../../public/images/'+`${contact.repPicture}`+'.png')
                                 else
                                   img(src="../../public/images/placeholder-rep.png")
                               div.item-data
