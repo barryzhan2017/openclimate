@@ -10,8 +10,7 @@ block content
                       h4 NORTH AMERICA
                       each contact in data
                        h2 #{contact['city']},
-                         span #{contact.stateAcronym} 
-                         |  #{contact.zipCode}
+                         span #{contact.stateAcronym}  #{contact.zipCode}
                        p= contact.mayorGHGTarget
                        - break
                     div.col-lg-6
