@@ -2,13 +2,19 @@ extends layout
 
 block content
     div.page-wrapper
+      div.navbar-wrapper  
         div.container
             nav.navbar.navbar-expand-lg.navbar-light
                 a(class="navbar-brand" href="#") 
-                    img(src="images/logo.png")
+                    img(src="../../public/images/Logo.png")
                 button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
                     span.navbar-toggler-icon
                 div.collapse.navbar-collapse#navbarSupportedContent
+                    div.close-menu-mobile
+                      div.menu-opened-logo
+                        img(src="../../public/images/logo-menu-mobile.png")
+                      div.menu-opened-close
+                        img(src="../../public/images/close.png")
                     ul.navbar-nav.mr-auto
                       li.nav-item
                         a(class="nav-link" href="#") About
@@ -26,25 +32,22 @@ block content
                             input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
                         div(class="top-bar-icon-country dropdown")           
                             button(class="dropdown-toggle" type="button" data-toggle="dropdown")
-                                img(src="images/flag-us.png")
+                                img(src="../../public/images/flag-us.png")
                                 span.caret
                                 ul.dropdown-menu
                                     li
                                         a(href="#") 
-                                            img(src="images/flag-us.png")
+                                            img(src="../../public/images/flag-us.png")
                         div(class="top-bar-icon-lang dropdown")         
                             button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
                                 span.caret
                                 ul.dropdown-menu
                                     li
                                         a(href="#") ENG 
-                        div(class="middle-bar")
-                        div(class="body-shade1")
-                        div(class="body-shade2") 
-
+      div.container  
             div.main-wrapper
                 div
-                    h3 WHO WE ARE?
+                    h3 WHO ARE WE?
                     h1 
                        | Climate
                        span Reps.com 
@@ -58,6 +61,24 @@ block content
                       span governments’ plans 
                       | to fight climate change, and what they’ve done so far.
                     a(class="btn-test" href="#") 
-                      img(src="images/arrow.png") 
+                      img(src="../../public/images/arrow.png") 
                       |  TEST IT
                       span  now
+                    div.panel-search
+                      form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")                          
+                        div(class="div-input")
+                            label.labelsmall Enter your Zip code:
+                            #error
+                            if error
+                                p.text-danger Zip code is not found!
+                            input(type="number" class="input" name="zipCode" id="input"  required autofocus)
+                        div(class="top-bar-icon-country dropdown")
+                            label.labelsmall Select your country:
+                            button(class="dropdown-toggle" type="button" data-toggle="dropdown")
+                                span United States 
+                                img(src="../../public/images/flag-us.png")
+                                span.caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="#") 
+                                            img(src="../../public/images/flag-us.png")

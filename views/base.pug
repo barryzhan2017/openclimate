@@ -1,153 +1,201 @@
 extends layout
 
 block content
-    table
-        tr
-            th Contact
-        tr
-            td zipCode            
-            td city             
-            td county             
-            td countyFIPS             
-            td stateAcronym            
-            td stateFIPS              
-            td state            
-            td repName             
-            td congressionalDistrict            
-            td repYearElected       
-            td repNextElection          
-            td repEmailAddress             
-            td repOnlineMessgae            
-            td repParty            
-            td repCommitteeAssignment
-            td repAddress
-            td repOfficeRoom        
-            td repTwitter        
-            td repPhone           
-            td senator1Name
-            td senator1YearElected
-            td senator1NextElection
-            td senator1EmailAddress             
-            td senator1OnlineMessgae             
-            td senator1Party             
-            td senator1CommitteeAssignment            
-            td senator1Address            
-            td senator1Twitter            
-            td senator1Phone             
-            td senator2Name            
-            td senator2YearElected             
-            td senator2NextElection             
-            td senator2EmailAddress             
-            td senator2OnlineMessgae             
-            td senator2Party            
-            td senator2CommitteeAssignment            
-            td senator2Address            
-            td senator2Twitter:            
-            td senator2Phone            
-            td governorName
-            td governorYearElected
-            td governorNextElection
-            td governorEmailAddress 
-            td governorOnlineMessgae
-            td governorParty
-            td governorAddress
-            td governorTwitter
-            td governorPhone
-        each contact in data
-            tr
-                td  #{contact['zipCode']}
-            
-                td #{contact['city']}
-                
-                td #{contact['county']}
-                
-                td #{contact['countyFIPS']}
-                
-                td #{contact['countyFIPS']}
-            
-                td #{contact['stateFIPS']}
-                
-                td #{contact['state']}
-            
-                td #{contact['repName']}
-                
-                td #{contact['congressionalDistrict']}
-            
-                td #{contact['repYearElected']}
-            
-                td #{contact['repNextElection']}
-            
-                td #{contact['repEmailAddress']}
-                
-                td #{contact['repOnlineMessgae']}
-            
-                td #{contact['repParty']}
-            
-                td #{contact['repCommitteeAssignment']}
-                
-                td #{contact['repAddress']}
-                
-                td #{contact['repOfficeRoom']}
-                
-                td #{contact['repTwitter']}
-                
-                td #{contact['repPhone']}
-            
-                td #{contact['senator1Name']}
-            
-                td #{contact['senator1YearElected']}
-                
-                td #{contact['senator1NextElection']}
-                
-                td #{contact['senator1EmailAddress']}
-                
-                td #{contact['senator1OnlineMessgae']}
-                
-                td #{contact['senator1Party']}
-                
-                td #{contact['senator1CommitteeAssignment']}
-            
-                td #{contact['senator1Address']}
-            
-                td #{contact['senator1Twitter']}
-            
-                td #{contact['senator1Phone']}
-                
-                td #{contact['senator2Name']}
-            
-                td #{contact['senator2YearElected']}
-                
-                td #{contact['senator2NextElection']}
-                
-                td #{contact['senator2EmailAddress']}
-                
-                td #{contact['senator2OnlineMessgae']}
-                
-                td #{contact['senator2Party']}
-                
-                td #{contact['senator2CommitteeAssignment']}
-            
-                td #{contact['senator2Address']}
-            
-                td #{contact['senator2Twitter']}
-            
-                td #{contact['senator2Phone']}
-            
-                td #{contact['governorName']}
-            
-                td #{contact['governorYearElected']}
-                
-                td #{contact['governorNextElection']}
-                
-                td #{contact['governorEmailAddress']}
-                
-                td #{contact['governorOnlineMessgae']}
-            
-                td #{contact['governorParty']}
-                
-                td #{contact['governorAddress']}
-                
-                td #{contact['governorTwitter']}
-            
-                td #{contact['governorPhone']}
-                
+    include inner
+    div.page-wrapper.page-inner
+        div.container
+            div.main-wrapper
+                div.row.row-top
+                    div.col-lg-6
+                      h4 NORTH AMERICA
+                      each contact in data
+                       h2 #{contact['city']},
+                         span #{contact.stateAcronym} #{contact.zipCode}
+                         p= contact.statePicture
+                       p= contact.mayorGHGTarget
+                        - break
+                    div.col-lg-6
+                      div.progress
+                        div(class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100") 25%
+                        h6 
+                          strong 75% 
+                          | away from target
+                div.row.row-main
+                    div.col-lg-3.side-img-wrapper
+                      div.side-img
+                        img(src="../../public/images/side-placeholder.jpg")
+                    div.col-lg-9
+                      div.results-list
+                        div.row
+                         each contact in data
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                if contact.repPicture
+                                  img(src='../../public/images/placeholder-rep.png'+`${contact.repPicture}`+'.jpg')
+                                else
+                                  img(src="../../public/images/placeholder-rep.png")
+                              div.item-data
+                                h5 Rep.
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.repName
+                                p Congressional District: 
+                                 =  contact.congressionalDistrict
+                                p Year Elected: 
+                                 =  contact.repYearElected
+                                p Next Election: 
+                                 =  contact.repNextElection
+                                p Party: 
+                                 =  contact.repParty
+                                p Committee Assignment: 
+                                 =  contact.repCommitteeAssignment
+                                p Office Room: 
+                                 =  contact.repOfficeRoom
+                                p Address: 
+                                 =  contact.repAddress
+                                p Email:
+                                 a(href= '//'+`${contact.repEmailAddress}`)
+                                   =  contact.repEmailAddress
+                                p Online Message: 
+                                 a(href= '//'+`${contact.repOnlineMessaging}`)
+                                  =  contact.repOnlineMessaging
+                                p Twitter: 
+                                 a(href= '//'+`${contact.prepTwitter}`)
+                                  =  contact.prepTwitter
+                                p Phone: 
+                                 a(href= 'tel:'+`${contact.repPhone}`)
+                                  =  contact.repPhone
+                         each contact in data
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                if contact.senator1Picture
+                                  img(src='../../public/images/placeholder-rep.png'+`${contact.senator1Picture}`+'.jpg')
+                                else
+                                  img(src="../../public/images/placeholder-rep.png")
+                              div.item-data
+                                h5 Senator.
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.senator1Name
+                                p Year Elected: 
+                                 =  contact.senator1YearElected
+                                p Next Election: 
+                                 =  contact.senator1NextElection
+                                p Party: 
+                                 =  contact.senator1Party
+                                p Committee Assignment: 
+                                 =  contact.senator1CommitteeAssignment
+                                p Address: 
+                                 =  contact.senator1Address
+                                p Email:
+                                 a(href= '//'+`${contact.senator1EmailAddress}`)
+                                  = contact.senator1EmailAddress
+                                p Online Message: 
+                                 a(href= '//'+`${contact.senator1OnlineMessaging}`)
+                                  = contact.senator1OnlineMessaging
+                                p Twitter: 
+                                 a(href= '//'+`${contact.senator1Twitter}`)
+                                  =  contact.senator1Twitter
+                                p Phone:
+                                 a(href= 'tel:'+`${contact.senator1Phone}`)
+                                  =  contact.senator1Phone
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                if contact.senator2Picture
+                                  img(src='../../public/images/placeholder-rep.png'+`${contact.senator2Picture}`+'.jpg')
+                                else
+                                  img(src="../../public/images/placeholder-rep.png")
+                              div.item-data
+                                h5 Senator.
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.senator2Name
+                                p Year Elected: 
+                                 =  contact.senator2YearElected
+                                p Next Election: 
+                                 =  contact.senator2NextElection
+                                p Party: 
+                                 =  contact.senator2Party
+                                p Committee Assignment: 
+                                 =  contact.senator2CommitteeAssignment
+                                p Address: 
+                                 =  contact.senator2Address
+                                p Email:
+                                 a(href= '//'+`${contact.senator2EmailAddress}`)
+                                  =  contact.senator2EmailAddress
+                                p Online Message: 
+                                 a(href= '//'+`${contact.senator2OnlineMessaging}`)
+                                  =  contact.senator2OnlineMessaging
+                                p Twitter: 
+                                 a(href= '//'+`${contact.senator2Twitter}`)
+                                  =  contact.senator2Twitter
+                                p Phone: 
+                                 a(href= 'tel:'+`${contact.senator2Phone}`)
+                                  =  contact.senator2Phone
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                if contact.governorPicture
+                                  img(src='../../public/images/placeholder-rep.png'+`${contact.governorPicture}`+'.jpg')
+                                else
+                                  img(src="../../public/images/placeholder-rep.png")
+                              div.item-data
+                                h5 Governor.
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.governorName
+                                p Year Elected: 
+                                 =  contact.governorYearElected
+                                p Next Election: 
+                                 =  contact.governorNextElection
+                                p Party: 
+                                 =  contact.governorParty
+                                p Committee Assignment: 
+                                 =  contact.governorCommitteeAssignment
+                                p Address: 
+                                 =  contact.governorAddress
+                                p Email:
+                                 a(href= '//'+`${contact.governorEmailAddress}`)
+                                  =  contact.governorEmailAddress
+                                p Online Message: 
+                                 a(href= '//'+`${contact.governorOnlineMessaging}`)
+                                  =  contact.governorOnlineMessaging
+                                p Twitter: 
+                                 a(href= '//'+`${contact.governorTwitter}`)
+                                  =  contact.governorTwitter
+                                p Phone: 
+                                 a(href= 'tel:'+`${contact.governorPhone}`)
+                                  =  contact.governorPhone
+                          div.col-lg-6
+                            div.col-item
+                              div.item-img
+                                if contact.mayorPicture
+                                  img(src='../../public/images/placeholder-rep.png'+`${contact.mayorPicture}`+'.jpg')
+                                else
+                                  img(src="../../public/images/placeholder-rep.png")
+                              div.item-data
+                                h5 Mayor.
+                                 = `${contact.city}.${contact.stateAcronym}`
+                                h4= contact.mayorName
+                                p Year Elected: 
+                                 = contact.mayorYearElected
+                                p Next Election: 
+                                 = contact.mayorNextElection
+                                p Party: 
+                                 = contact.mayorParty
+                                p Committee Assignment: 
+                                 = contact.mayorCommitteeAssignment
+                                p Address: 
+                                 = contact.mayorAddress
+                                p Email:
+                                 a(href= '//'+`${contact.mayorEmailAddress}`)
+                                  = contact.mayorEmailAddress
+                                p Online Message: 
+                                 a(href= '//'+`${contact.mayorOnlineMessaging}`)
+                                  = contact.mayorOnlineMessaging
+                                p Twitter: 
+                                 a(href= '//'+`${contact.mayorTwitter}`)
+                                  = contact.mayorTwitter
+                                p Phone: 
+                                 a(href= 'tel:'+`${contact.mayorPhone}`)
+                                  = contact.mayorPhone
+                                 - break

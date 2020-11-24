@@ -23,11 +23,17 @@ const contactSchema = new mongoose.Schema(
     stateFIPS: {
       type: Number
     },
+    statePicture: {
+      type: String
+    },
     state: {
       type: String,
       required: [true, "A contact must have a state"]
     },
     repName: {
+      type: String
+    },
+    repPicture: {
       type: String
     },
     congressionalDistrict: {
@@ -42,7 +48,7 @@ const contactSchema = new mongoose.Schema(
     repEmailAddress: {
       type: String
     },
-    repOnlineMessgae: {
+    repOnlineMessaging: {
       type: String
     },
     repParty: {
@@ -66,6 +72,9 @@ const contactSchema = new mongoose.Schema(
     senator1Name: {
       type: String
     },
+    senator1Picture: {
+      type: String
+    },
     senator1YearElected: {
       type: String
     },
@@ -75,7 +84,7 @@ const contactSchema = new mongoose.Schema(
     senator1EmailAddress: {
       type: String
     },
-    senator1OnlineMessgae: {
+    senator1OnlineMessaging: {
       type: String
     },
     senator1Party: {
@@ -96,6 +105,9 @@ const contactSchema = new mongoose.Schema(
     senator2Name: {
       type: String
     },
+    senator2Picture: {
+      type: String
+    },
     senator2YearElected: {
       type: String
     },
@@ -105,7 +117,7 @@ const contactSchema = new mongoose.Schema(
     senator2EmailAddress: {
       type: String
     },
-    senator2OnlineMessgae: {
+    senator2OnlineMessaging: {
       type: String
     },
     senator2Party: {
@@ -126,6 +138,9 @@ const contactSchema = new mongoose.Schema(
     governorName: {
       type: String
     },
+    governorPicture: {
+      type: String
+    },
     governorYearElected: {
       type: String
     },
@@ -135,7 +150,7 @@ const contactSchema = new mongoose.Schema(
     governorEmailAddress: {
       type: String
     },
-    governorOnlineMessgae: {
+    governorOnlineMessaging: {
       type: String
     },
     governorParty: {
@@ -148,6 +163,45 @@ const contactSchema = new mongoose.Schema(
       type: String
     },
     governorPhone: {
+      type: String
+    },
+    governorGHGTarget: {
+      type: Number
+    },
+    governorGHGCurrent: {
+      type: Number
+    },
+    mayorName: {
+      type: String
+    },
+    mayorPicture: {
+      type: String
+    },
+    mayorYearElected: {
+      type: String
+    },
+    mayorNextElection: {
+      type: String
+    },
+    mayorEmailAddress: {
+      type: String
+    },
+    mayorOnlineMessaging: {
+      type: String
+    },
+    mayorParty: {
+      type: String
+    },
+    mayorAddress: {
+      type: String
+    },
+    mayorTwitter: {
+      type: String
+    },
+    mayorPhone: {
+      type: String
+    },
+    mayorGHGTarget: {
       type: String
     },
     createdAt: {
