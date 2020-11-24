@@ -8,11 +8,11 @@ exports.getContactsByZipCode = async (req, res) => {
     //percentage calc
     let percentage = 10;
     if (contact.length > 0) {
-      /*const targetLeft = parseInt((contact[0].countryGHGCurrent - contact[0].countryGHGTarget) / contact[0].countryGHGCurrent * 100);
+      const targetLeft = parseInt((contact[0].countryGHGCurrent - contact[0].countryGHGTarget) / contact[0].countryGHGCurrent * 100);
       percentage = 100 - targetLeft;
       if(percentage>100){
         percentage = 100;
-      }*/
+      }
       res.status(200).render("base", { data: contact, percentage: percentage});
     }
     else {
