@@ -335,10 +335,21 @@ border-color:#d9d9d9;
 
 }
 
-.item-img img{
-	width: 96px;
-	height:96px;
-	border-radius: 100%;
+.avatar-container{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.avatar-container img{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .item-data h5{

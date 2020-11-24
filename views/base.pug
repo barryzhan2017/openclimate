@@ -34,10 +34,11 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                if contact.repPicture
-                                  img(src=`../../public/images/${contact.repPicture}.jpg`)
-                                else
-                                  img(src="../../public/images/placeholder-rep.png")
+                                div.avatar-container
+                                  if contact.repPicture
+                                    img(src=`../../public/images/${contact.repPicture}.jpg`)
+                                  else
+                                    img(src="../../public/images/placeholder-rep.png")
                               div.item-data
                                 h5 Rep.
                                  = `${contact.city}.${contact.stateAcronym}`
@@ -72,10 +73,11 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                if contact.senator1Picture
-                                  img(src=`../../public/images/${contact.senator1Picture}.jpg`)
-                                else
-                                  img(src="../../public/images/placeholder-rep.png")
+                                div.avatar-container
+                                  if contact.senator1Picture
+                                    img(src=`../../public/images/${contact.senator1Picture}.jpg`)
+                                  else
+                                    img(src="../../public/images/placeholder-rep.png")
                               div.item-data
                                 h5 Senator.
                                  = `${contact.city}.${contact.stateAcronym}`
@@ -105,10 +107,11 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                if contact.senator2Picture
-                                  img(src=`../../public/images/${contact.senator2Picture}.jpg`)
-                                else
-                                  img(src="../../public/images/placeholder-rep.png")
+                                div.avatar-container
+                                  if contact.senator2Picture
+                                    img(src=`../../public/images/${contact.senator2Picture}.jpg`)
+                                  else
+                                    img(src="../../public/images/placeholder-rep.png")
                               div.item-data
                                 h5 Senator.
                                  = `${contact.city}.${contact.stateAcronym}`
@@ -138,10 +141,11 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                if contact.governorPicture
-                                  img(src=`../../public/images/${contact.governorPicture}.jpg`)
-                                else
-                                  img(src="../../public/images/placeholder-rep.png")
+                                div.avatar-container
+                                  if contact.governorPicture
+                                    img(src=`../../public/images/${contact.governorPicture}.jpg`)
+                                  else
+                                    img(src="../../public/images/placeholder-rep.png")
                               div.item-data
                                 h5 Governor.
                                  = `${contact.city}.${contact.stateAcronym}`
@@ -171,10 +175,11 @@ block content
                           div.col-lg-6
                             div.col-item
                               div.item-img
-                                if contact.mayorPicture
-                                  img(src='../../public/images/'+`${contact.mayorPicture}`+'.jpg')
-                                else
-                                  img(src="../../public/images/placeholder-rep.png")
+                                div.avatar-container
+                                  if contact.mayorPicture
+                                    img(src='../../public/images/'+`${contact.mayorPicture}`+'.jpg')
+                                  else
+                                    img(src="../../public/images/placeholder-rep.png")
                               div.item-data
                                 h5 Mayor.
                                  = `${contact.city}.${contact.stateAcronym}`
