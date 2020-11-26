@@ -369,13 +369,19 @@ border-color:#d9d9d9;
 	color: #000;
 }
 
-.item-data p{
-	font-family: Roboto;
-	font-size: 14px;
-	line-height: 22px;
-	font-weight: 400;
-	color: #000;
-	margin-bottom: 0;
+.item-data label{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.item-data span{
+    color: #5e6f6d;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 

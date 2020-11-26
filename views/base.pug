@@ -43,32 +43,43 @@ block content
                                 h5 Rep.
                                  = `${contact.city}.${contact.stateAcronym}`
                                 h4= contact.repName
-                                p Congressional District: 
-                                 =  contact.congressionalDistrict
-                                p Year Elected: 
-                                 =  contact.repYearElected
-                                p Next Election: 
-                                 =  contact.repNextElection
-                                p Party: 
-                                 =  contact.repParty
-                                p Committee Assignment: 
-                                 =  contact.repCommitteeAssignment
-                                p Office Room: 
-                                 =  contact.repOfficeRoom
-                                p Address: 
-                                 =  contact.repAddress
-                                p Email:
-                                 a(href= '//'+`${contact.repEmailAddress}`)
-                                   =  contact.repEmailAddress
-                                p Online Message: 
-                                 a(href= '//'+`${contact.repOnlineMessaging}`)
-                                  =  contact.repOnlineMessaging
-                                p Twitter: 
-                                 a(href= '//'+`${contact.prepTwitter}`)
-                                  =  contact.prepTwitter
-                                p Phone: 
-                                 a(href= 'tel:'+`${contact.repPhone}`)
-                                  =  contact.repPhone
+                                div
+                                  label Congressional District: 
+                                  span  #{contact.congressionalDistrict}
+                                div
+                                  label Year Elected: 
+                                  span  #{contact.repYearElected}
+                                div
+                                  label Next Election: 
+                                  span  #{contact.repNextElection}
+                                div
+                                  label Party: 
+                                  span  #{contact.repParty}
+                                div
+                                  label Committee Assignment: 
+                                  span  #{contact.repCommitteeAssignment}
+                                div
+                                  label Office Room: 
+                                  span  #{contact.repOfficeRoom}
+                                div
+                                  label Address: 
+                                  span  #{contact.repAddress}
+                                div
+                                  label Email:
+                                  a(href= '//'+`${contact.repEmailAddress}`)
+                                    =  contact.repEmailAddress
+                                div
+                                  label Online Message: 
+                                  a(href= '//'+`${contact.repOnlineMessaging}`)
+                                    =  contact.repOnlineMessaging
+                                div
+                                  label Twitter: 
+                                  a(href= '//'+`${contact.prepTwitter}`)
+                                    =  contact.prepTwitter
+                                div
+                                  label Phone: 
+                                  a(href= 'tel:'+`${contact.repPhone}`)
+                                    =  contact.repPhone
                          each contact in data
                           div.col-lg-6
                             div.col-item
@@ -82,28 +93,37 @@ block content
                                 h5 Senator.
                                  = `${contact.city}.${contact.stateAcronym}`
                                 h4= contact.senator1Name
-                                p Year Elected: 
-                                 =  contact.senator1YearElected
-                                p Next Election: 
-                                 =  contact.senator1NextElection
-                                p Party: 
-                                 =  contact.senator1Party
-                                p Committee Assignment: 
-                                 =  contact.senator1CommitteeAssignment
-                                p Address: 
-                                 =  contact.senator1Address
-                                p Email:
-                                 a(href= '//'+`${contact.senator1EmailAddress}`)
-                                  = contact.senator1EmailAddress
-                                p Online Message: 
-                                 a(href= '//'+`${contact.senator1OnlineMessaging}`)
-                                  = contact.senator1OnlineMessaging
-                                p Twitter: 
-                                 a(href= '//'+`${contact.senator1Twitter}`)
-                                  =  contact.senator1Twitter
-                                p Phone:
-                                 a(href= 'tel:'+`${contact.senator1Phone}`)
-                                  =  contact.senator1Phone
+                                div
+                                  label Year Elected: 
+                                  span  #{contact.senator1YearElected}
+                                div
+                                  label Next Election:  
+                                  span  #{contact.senator1NextElection}
+                                div
+                                  label Party: 
+                                  span  #{contact.senator1Party}
+                                div
+                                  label Committee Assignment: 
+                                  span  #{contact.senator1CommitteeAssignment}
+                                div
+                                  label Address: 
+                                  span  #{contact.senator1Address}
+                                div
+                                  label Email:
+                                  a(href= '//'+`${contact.senator1EmailAddress}`)
+                                    = contact.senator1EmailAddress
+                                div
+                                  label Online Message: 
+                                  a(href= '//'+`${contact.senator1OnlineMessaging}`)
+                                    = contact.senator1OnlineMessaging
+                                div
+                                  label Twitter: 
+                                  a(href= '//'+`${contact.senator1Twitter}`)
+                                    =  contact.senator1Twitter
+                                div
+                                  label Phone:
+                                  a(href= 'tel:'+`${contact.senator1Phone}`)
+                                    =  contact.senator1Phone
                           div.col-lg-6
                             div.col-item
                               div.item-img
@@ -116,28 +136,37 @@ block content
                                 h5 Senator.
                                  = `${contact.city}.${contact.stateAcronym}`
                                 h4= contact.senator2Name
-                                p Year Elected: 
-                                 =  contact.senator2YearElected
-                                p Next Election: 
-                                 =  contact.senator2NextElection
-                                p Party: 
-                                 =  contact.senator2Party
-                                p Committee Assignment: 
-                                 =  contact.senator2CommitteeAssignment
-                                p Address: 
-                                 =  contact.senator2Address
-                                p Email:
-                                 a(href= '//'+`${contact.senator2EmailAddress}`)
-                                  =  contact.senator2EmailAddress
-                                p Online Message: 
-                                 a(href= '//'+`${contact.senator2OnlineMessaging}`)
-                                  =  contact.senator2OnlineMessaging
-                                p Twitter: 
-                                 a(href= '//'+`${contact.senator2Twitter}`)
-                                  =  contact.senator2Twitter
-                                p Phone: 
-                                 a(href= 'tel:'+`${contact.senator2Phone}`)
-                                  =  contact.senator2Phone
+                                div
+                                  label Year Elected: 
+                                  span  #{contact.senator2YearElected}
+                                div
+                                  label Next Election: 
+                                  span  #{contact.senator2NextElection}
+                                div
+                                  label Party: 
+                                  span  #{contact.senator2Party}
+                                div
+                                  label Committee Assignment: 
+                                  span  #{contact.senator2CommitteeAssignment}
+                                div
+                                  label Address: 
+                                  span  #{contact.senator2Address}
+                                div
+                                  label Email:
+                                  a(href= '//'+`${contact.senator2EmailAddress}`)
+                                    =  contact.senator2EmailAddress
+                                div
+                                  label Online Message: 
+                                  a(href= '//'+`${contact.senator2OnlineMessaging}`)
+                                    =  contact.senator2OnlineMessaging
+                                div
+                                  label Twitter: 
+                                  a(href= '//'+`${contact.senator2Twitter}`)
+                                    =  contact.senator2Twitter
+                                div
+                                  label Phone: 
+                                  a(href= 'tel:'+`${contact.senator2Phone}`)
+                                    =  contact.senator2Phone
                           div.col-lg-6
                             div.col-item
                               div.item-img
@@ -150,28 +179,37 @@ block content
                                 h5 Governor.
                                  = `${contact.city}.${contact.stateAcronym}`
                                 h4= contact.governorName
-                                p Year Elected: 
-                                 =  contact.governorYearElected
-                                p Next Election: 
-                                 =  contact.governorNextElection
-                                p Party: 
-                                 =  contact.governorParty
-                                p Committee Assignment: 
-                                 =  contact.governorCommitteeAssignment
-                                p Address: 
-                                 =  contact.governorAddress
-                                p Email:
-                                 a(href= '//'+`${contact.governorEmailAddress}`)
-                                  =  contact.governorEmailAddress
-                                p Online Message: 
-                                 a(href= '//'+`${contact.governorOnlineMessaging}`)
-                                  =  contact.governorOnlineMessaging
-                                p Twitter: 
-                                 a(href= '//'+`${contact.governorTwitter}`)
-                                  =  contact.governorTwitter
-                                p Phone: 
-                                 a(href= 'tel:'+`${contact.governorPhone}`)
-                                  =  contact.governorPhone
+                                div
+                                  label Year Elected: 
+                                  span  #{contact.governorYearElected}
+                                div
+                                  label Next Election: 
+                                  span  #{contact.governorNextElection}
+                                div
+                                  label Party: 
+                                  span  #{contact.governorParty}
+                                div
+                                  label Committee Assignment: 
+                                  span  #{contact.governorCommitteeAssignment}
+                                div
+                                  label Address: 
+                                  span  #{contact.governorAddress}
+                                div
+                                  label Email:
+                                  a(href= '//'+`${contact.governorEmailAddress}`)
+                                    =  contact.governorEmailAddress
+                                div
+                                  label Online Message: 
+                                  a(href= '//'+`${contact.governorOnlineMessaging}`)
+                                    =  contact.governorOnlineMessaging
+                                div
+                                  label Twitter: 
+                                  a(href= '//'+`${contact.governorTwitter}`)
+                                    =  contact.governorTwitter
+                                div
+                                  label Phone: 
+                                  a(href= 'tel:'+`${contact.governorPhone}`)
+                                    =  contact.governorPhone
                           div.col-lg-6
                             div.col-item
                               div.item-img
@@ -184,26 +222,35 @@ block content
                                 h5 Mayor.
                                  = `${contact.city}.${contact.stateAcronym}`
                                 h4= contact.mayorName
-                                p Year Elected: 
-                                 = contact.mayorYearElected
-                                p Next Election: 
-                                 = contact.mayorNextElection
-                                p Party: 
-                                 = contact.mayorParty
-                                p Committee Assignment: 
-                                 = contact.mayorCommitteeAssignment
-                                p Address: 
-                                 = contact.mayorAddress
-                                p Email:
-                                 a(href= '//'+`${contact.mayorEmailAddress}`)
-                                  = contact.mayorEmailAddress
-                                p Online Message: 
-                                 a(href= '//'+`${contact.mayorOnlineMessaging}`)
-                                  = contact.mayorOnlineMessaging
-                                p Twitter: 
-                                 a(href= '//'+`${contact.mayorTwitter}`)
-                                  = contact.mayorTwitter
-                                p Phone: 
-                                 a(href= 'tel:'+`${contact.mayorPhone}`)
-                                  = contact.mayorPhone
-                                 - break
+                                div
+                                  label Year Elected: 
+                                  span  #{contact.mayorYearElected}
+                                div
+                                  label Next Election: 
+                                  span  #{contact.mayorNextElection}
+                                div
+                                  label Party: 
+                                  span  #{contact.mayorParty}
+                                div
+                                  label Committee Assignment: 
+                                  span  #{contact.mayorCommitteeAssignment}
+                                div
+                                  label Address: 
+                                  span  #{contact.mayorAddress}
+                                div
+                                  label Email:
+                                  a(href= '//'+`${contact.mayorEmailAddress}`)
+                                    = contact.mayorEmailAddress
+                                div
+                                  label Online Message: 
+                                  a(href= '//'+`${contact.mayorOnlineMessaging}`)
+                                    = contact.mayorOnlineMessaging
+                                div
+                                  label Twitter: 
+                                  a(href= '//'+`${contact.mayorTwitter}`)
+                                    = contact.mayorTwitter
+                                div
+                                  label Phone: 
+                                  a(href= 'tel:'+`${contact.mayorPhone}`)
+                                    = contact.mayorPhone
+                                  - break
