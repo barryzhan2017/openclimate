@@ -183,7 +183,7 @@ const contactSchema = new mongoose.Schema(
     mayorNextElection: {
       type: String
     },
-    mayorEmailAddress: {
+    mayorEmail: {
       type: String
     },
     mayorOnlineMessaging: {
