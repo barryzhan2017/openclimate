@@ -666,8 +666,24 @@ footer{
     margin-right: -10px;
 }
 
+/*Q&A*/
+.question{
+    font-family: Poppins;
+    margin-bottom: 30px;
+}
 
+.row-main .answer{
+    color: #000;
+}
 
+.answer {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #3de2d2;
+}
+
+.question-container{
+    margin-bottom: 50px;
+}
 
 @media screen and (max-width:991px){
 	.container {
