@@ -14,13 +14,13 @@ div.navbar-wrapper.nw-inner
                   img(src="../../public/images/close.png")
               ul.navbar-nav.mr-auto
                 li.nav-item
-                    a(class="nav-link" href="/about") About
+                    a(class=`nav-link ${path=='/about'?'active':''}` href="/about") About
                 li.nav-item
-                    a(class="nav-link" href="#") Submit bug
+                    a(class=`nav-link ${path=='/submit-bug'?'active':''}` href="/submit-bug") Submit bug
                 li.nav-item
-                    a(class="nav-link" href="/question-answers") Q&A
+                    a(class=`nav-link ${path=='/question-answers'?'active':''}` href="/question-answers") Q&A
                 li.nav-item
-                    a(class="nav-link" href="#") Contact
+                    a(class=`nav-link ${path=='#'?'active':''}` href="#") Contact
               form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")
                 div(class="div-input")
                         #error

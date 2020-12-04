@@ -265,6 +265,9 @@ background-color: #fff;
 border-color:#d9d9d9;
 }
 
+.nav-link.active {
+    font-weight: 500;
+}
 
 .row-top{
 	margin-bottom: 50px;
