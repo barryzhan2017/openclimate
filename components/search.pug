@@ -1,0 +1,32 @@
+div.search-container
+    .container
+        .row    
+            .col-lg-12.text-center
+                h2 Bridge the gap
+            .col-lg-1
+            .col-lg-10
+                p Let your reps know that you want them to take action on climate change. Enter your ZIP code to find out who’s in charge and what percentage of planned greenhouse gas reductions they have led so far.
+            .col-lg-1
+            .col-lg-12
+                hr
+            .col-lg-12.d-flex.justify-content-center
+                div.panel-search.visible
+                      form(class="form-signin row my-2 my-lg-0 align-items-end justify-content-center" method="POST" action="/api/v1/contact")                          
+                        div.pl-2.pr-2
+                            label.labelsmall Enter your Zip code:
+                            #error
+                            if error
+                                p.text-danger Zip code is not found!
+                            input(type="number" class="input" name="zipCode" id="input"  required autofocus)
+                        div(class="pl-2 pr-2 top-bar-icon-country dropdown ")
+                            label.labelsmall Select your country:
+                            button(class="dropdown-toggle" type="button" data-toggle="dropdown")
+                                span United States 
+                                img(src="../../public/images/flag-us.svg")
+                                span.caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="#") 
+                                            img(src="../../public/images/flag-us.svg")
+                        div.pl-2.pr-2
+                            button(type="submit" class="submit-button") → Validate informations

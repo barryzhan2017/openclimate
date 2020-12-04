@@ -5,5 +5,5 @@ $('.close-menu-mobile').click(function(){
 
 $('.btn-test').click(function(){
 	$(this).hide();
-	$('.panel-search').show();
+	$('.panel-search').addClass("visible");
 });
