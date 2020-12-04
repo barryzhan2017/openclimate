@@ -10,11 +10,20 @@ router.get('/about', function (req, res, next) {
     });
 });
 
-/* GET about. */
+/* GET Q&A. */
 router.get('/question-answers', function (req, res, next) {
     res.render('question-answers', { 
         error: false, 
         title: "ClimateReps - Question & Answers",
+        path: req.path
+    });
+});
+
+/* GET Submit bug. */
+router.get('/submit-bug', function (req, res, next) {
+    res.render('submit-bug', { 
+        error: false, 
+        title: "ClimateReps - Submit a bug ",
         path: req.path
     });
 });

@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    include inner
+    div.page-inner
+        div.container
+            div.main-wrapper
+                div.row.row-top
+                    div.col-lg-6
+                        img.mb-3(src="../public/images/eye-icon.png")
+                        h4.mb-0 SUBMIT A BUG
+                div.row.row-main
+                    div.col-lg-12
+                        h2.page-title Something 
+                            strong wrong?
+                    .col-lg-8
+                        p.text-page If the info we give you about your representatives is wrong, please let us know here. If something
+                            | weird happens while you’re using ClimateReps, we’d like to know about it too.
+                    .col-lg-6
+                        form.climatereps-form
+                            .row 
+                                .form-group.col-lg-6
+                                    label First name
+                                    input.form-control(type='text' required)
+                                .form-group.col-lg-6
+                                    label Last name
+                                    input.form-control(type='text' required)
+                                .form-group.col-lg-12
+                                    label(for='exampleInputEmail1') Mail address
+                                    input.form-control(type='email' required)
+                                .form-group.col-lg-12
+                                    label What happened to you?
+                                    textarea.form-control
+                                .col-lg-12
+                                    button(type='submit')  → Submit 
+                                        strong your bug
+
+        include ../components/search
+        include ../components/footer
