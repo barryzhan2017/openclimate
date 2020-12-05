@@ -11,9 +11,9 @@ block content
                         h4.mb-0 QUESTION & ANSWERS
                 div.row.row-main
                     div.col-lg-12.question-container
-                        h2.question How should I 
+                        h2.question.collapsed(data-toggle="collapse" data-target="#answer1")  How should I 
                             strong address my elected representatives?
-                        p.answer There is an etiquette for letters and emails that you can read about here (
+                        p.answer.collapse(id="answer1") There is an etiquette for letters and emails that you can read about here (
                             a(href="https://www.iaee.com/wp-content/uploads/2019/12/EMB-Writing-Elected-Officials_Nov19.pdf" target="_blank") https://www.iaee.com/wp-content/uploads/2019/12/EMB-Writing-Elected-Officials_Nov19.pdf
                             | ). Overall, just try to be polite and concise when 
                             | addressing your elected officials - and let them know that you are their constituents and what sort of actions you expect from them (to follow up on climate targets, etc.)
@@ -22,27 +22,32 @@ block content
                             | Phone calls are less formal but follow roughly the same etiquette. (
                             a(href="https://www.ucsusa.org/resources/how-have-productive-phone-call-your-legislators-office" target="_blank") https://www.ucsusa.org/resources/how-have-productive-phone-call-your-legislators-office
                             | ).
+                        hr
                     div.col-lg-12.question-container
-                        h2.question Where do you get 
+                        h2.question.collapsed(data-toggle="collapse" data-target="#answer2") Where do you get 
                             strong the data and all this information from?
-                        p.answer From federal sources or trustworthy online repositories, from the Library of Congress to websites
+                        p.answer.collapse(id="answer2") From federal sources or trustworthy online repositories, from the Library of Congress to websites
                             | like Ballotpedia. Nothing with a particular opinion or agenda.
+                        hr
                     div.col-lg-12.question-container
-                        h2.question How do you calculate 
+                        h2.question.collapsed(data-toggle="collapse" data-target="#answer3") How do you calculate 
                             strong the numbers on the greenhouse gas tracker for my government?
-                        p.answer We look at the monthly data on energy consumption from the US Energy Information Administration (EIA). This data says how much natural gas, coal, solar power, etc. was consumed by people and industries around you in the past thirty days. We translate it into greenhouse gas emission levels, and compare these with the plans set by federal and local governments.
+                        p.answer.collapse(id="answer3") We look at the monthly data on energy consumption from the US Energy Information Administration (EIA). This data says how much natural gas, coal, solar power, etc. was consumed by people and industries around you in the past thirty days. We translate it into greenhouse gas emission levels, and compare these with the plans set by federal and local governments.
                             br
                             br
                             | Reaching 100% on your tracker means that the greenhouse gas emitted in your area match the target set by your government in its plans.
+                        hr
                     div.col-lg-12.question-container
-                        h2.question When will I be able to 
+                        h2.question.collapsed(data-toggle="collapse" data-target="#answer4") When will I be able to 
                             strong use ClimateReps outside the US?
-                        p.answer Hopefully, soon. We want to expand for other countries as soon as possible but this will depend partly on how many US users we get. 
+                        p.answer.collapse(id="answer4") Hopefully, soon. We want to expand for other countries as soon as possible but this will depend partly on how many US users we get. 
                             strong Spread the word!
+                        hr
                     div.col-lg-12.question-container
-                        h2.question Did anyone 
+                        h2.question.collapsed(data-toggle="collapse" data-target="#answer5") Did anyone 
                             strong fund this project?
-                        p.answer Nope. This is a passion project without any affiliation.
+                        p.answer.collapse(id="answer5") Nope. This is a passion project without any affiliation.
+                        hr
 
         include ../components/search
         include ../components/footer

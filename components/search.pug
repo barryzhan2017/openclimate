@@ -1,12 +1,9 @@
-div.search-container
+div.search-container(style=`background-image: url("${searchImagePath}");`)
+    .search-overlay
     .container
         .row    
             .col-lg-12.text-center
                 h2 Bridge the gap
-            .col-lg-1
-            .col-lg-10
-                p Let your reps know that you want them to take action on climate change. Enter your ZIP code to find out who’s in charge and what percentage of planned greenhouse gas reductions they have led so far.
-            .col-lg-1
             .col-lg-12
                 hr
             .col-lg-12.d-flex.justify-content-center
@@ -29,4 +26,4 @@ div.search-container
                                         a(href="#") 
                                             img(src="../../public/images/flag-us.svg")
                         div.pl-2.pr-2.mt-3
-                            button(type="submit" class="submit-button") → Validate informations
+                            button(type="submit" class="submit-button") → Find your reps
