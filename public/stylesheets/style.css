@@ -198,8 +198,8 @@ form.form-signin.form-inline {
 .main-wrapper p{
 	font-family: Roboto;
 	color:#fff;
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 27px;
 }
 
 .main-wrapper p span{
@@ -682,6 +682,7 @@ footer{
     cursor: pointer;
     font-family: Poppins;
     position: relative;
+    font-size: 30px;
 }
 
 .row-main .answer{
@@ -728,6 +729,7 @@ footer{
 .page-title{
     font-family: Poppins;
     margin-bottom: 30px;
+    font-size: 30px;
 }
 .main-wrapper .text-page{
     color: #000;
@@ -748,7 +750,7 @@ footer{
 }
 .grid-title{
     font-family: Poppins;
-    font-size: 52px;
+    font-size: 42px;
 }
 .grid-column-margin{
     margin-top: 100px;
@@ -1026,7 +1028,7 @@ order:2;
     padding: 10px 0;
 }
 .grid-title{
-    font-size: 40px;
+    font-size: 38px;
 }
 .section-remove-margin {
     padding-top: 40px;
