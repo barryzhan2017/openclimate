@@ -7,7 +7,7 @@ router.get('/about', function (req, res, next) {
         error: false, 
         title: "ClimateReps - About",
         path: req.path,
-        searchImagePath: "../public/images/about-search.png"
+        searchImagePath: "../public/images/about-search.jpg"
     });
 });
 
@@ -17,7 +17,7 @@ router.get('/question-answers', function (req, res, next) {
         error: false, 
         title: "ClimateReps - Question & Answers",
         path: req.path,
-        searchImagePath: "../public/images/question-answers-search.png"
+        searchImagePath: "../public/images/question-answers-search.jpg"
     });
 });
 
@@ -27,7 +27,7 @@ router.get('/submit-bug', function (req, res, next) {
         error: false, 
         title: "ClimateReps - Submit a bug ",
         path: req.path,
-        searchImagePath: "../public/images/submit-bug-search.png"
+        searchImagePath: "../public/images/submit-bug-search.jpg"
     });
 });
 
