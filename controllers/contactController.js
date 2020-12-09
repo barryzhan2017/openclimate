@@ -13,7 +13,11 @@ exports.getContactsByZipCode = async (req, res) => {
       if(percentage>100){
         percentage = 100;
       }
-      res.status(200).render("base", { data: contact, percentage: percentage});
+      res.status(200).render("base", { 
+        data: contact, 
+        percentage: percentage, 
+        searchImagePath: "../../public/images/question-answers-search.jpg"
+      });
     }
     else {
       res.render('index', { error: true });
