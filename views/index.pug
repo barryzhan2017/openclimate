@@ -19,6 +19,8 @@ block content
                       li.nav-item
                         a(class=`nav-link ${path=='/about'?'active':''}` href="/about") About
                       li.nav-item
+                        a(class=`nav-link ${path=='/about'?'active':''}` href="/about") My State                       
+                      li.nav-item
                         a(class=`nav-link ${path=='/submit-bug'?'active':''}` href="/submit-bug") Submit bug
                       li.nav-item
                         a(class=`nav-link ${path=='/question-answers'?'active':''}` href="/question-answers") Q&A
@@ -30,26 +32,14 @@ block content
                             if error
                                 p.text-danger Zip code not found!
                             input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
-                        div(class="top-bar-icon-country dropdown")           
-                            button(class="dropdown-toggle" type="button" data-toggle="dropdown")
-                                img(src="../../public/images/flag-us.svg")
-                                span.caret
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#") 
-                                            img(src="../../public/images/flag-us.svg")
-                        div(class="top-bar-icon-lang dropdown")         
-                            button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
-                                span.caret
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#") ENG 
+                        div(class="div-input")           
+                          button(type="submit" class="home-submit-button") GO
       div.container  
             div.main-wrapper
                 div
                     h3 WHAT IS THIS?
                     h1 
-                       | ClimateReps.com 
+                       span ClimateReps.com 
                        | is the first 
                        br
                        span open climate democracy 
@@ -66,13 +56,13 @@ block content
                       span  now
                     div.panel-search
                       form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")                          
-                        div(class="div-input")
-                            label.labelsmall Enter your Zip code:
+                        div(class="pl-2 pr-2 div-input")
+                            label.labelsmall Enter your Zip Code:
                             #error
                             if error
                                 p.text-danger Zip code not found!
                             input(type="number" class="input" name="zipCode" id="input"  required autofocus)
-                        div(class="top-bar-icon-country dropdown")
+                        div(class="pl-2 pr-2 top-bar-icon-country dropdown")
                             label.labelsmall Select your country:
                             button(class="dropdown-toggle" type="button" data-toggle="dropdown")
                                 span United States 
@@ -82,3 +72,5 @@ block content
                                     li
                                         a(href="#") 
                                             img(src="../../public/images/flag-us.svg")
+                        div(class="pl-2 pr-2 div-input")
+                            button(type="submit" class="index-submit-button") → Find your reps
