@@ -50,27 +50,27 @@ $(document).ready(function() {
     // click progress bar- change active class. load city/state/country, change aria-value and data-value
     // 
     $('.progress-link').click(function(){
-        cityPercent = progress.data("city")
-        statePercent = progress.data("state")
-        countryPercent = progress.data("country")
+        // cityPercent = progress.data("city")
+        // statePercent = progress.data("state")
+        // countryPercent = progress.data("country")
 
         $('.progress-link').each(function(index, el) {
             $(el).removeClass('active');
         });
         $(this).addClass('active');
         if ($(this).attr('id')=='country-progress'){
-            progress.data('value', countryPercent);
-            displayProgress();
+            // progress.data('value', countryPercent);
+            // displayProgress();
 
         }
         if ($(this).attr('id')=='state-progress'){
-            progress.data('value', statePercent);
-            displayProgress();
+            // progress.data('value', statePercent);
+            // displayProgress();
 
         }
         if ($(this).attr('id')=='city-progress'){
-            progress.data('value', cityPercent);
-            displayProgress();
+            // progress.data('value', cityPercent);
+            // displayProgress();
 
         }
     });
