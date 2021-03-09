@@ -25,26 +25,21 @@ $(document).ready(function() {
     });    
     
     const progress = $('.progress-animation');
-
-    function displayProgress (inputfld, boundfld) {
-        if(progress){
-            const currentValue = progress.data("value");
-            let counter = 0;
-            const progressBar = progress.children(".progress-bar");
-            const remaning = progress.find("h6 strong span");
-            const interval = setInterval(function(){
-                progressBar.css("width", counter+"%");
-                progressBar.text(counter + "% ");
-                remaning.text((100-counter)+ "% ");
-                if(counter===currentValue){
-                    clearInterval(interval);
-                }
-                counter++;
-            },COUNTER_INTERVAL_TIME);
-        }
+    if(progress){
+        const currentValue = progress.data("value");
+        let counter = 0;
+        const progressBar = progress.children(".progress-bar");
+        const remaning = progress.find("h6 strong span");
+        const interval = setInterval(function(){
+            progressBar.css("width", counter+"%");
+            progressBar.text(counter + "% ");
+            remaning.text((100-counter)+ "% ");
+            if(counter===currentValue){
+                clearInterval(interval);
+            }
+            counter++;
+        },COUNTER_INTERVAL_TIME);
     }
-    
-    displayProgress();
     
 
     // click progress bar- change active class. load city/state/country, change aria-value and data-value

@@ -18,6 +18,12 @@ dotenv.config({ path: './config.env' });
 //     })
 //     .then(con => console.log('DB connection is successful.'));
 
+
+mongoose.connect('mongodb://localhost/openClimate', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+  });
 const port = process.env.PORT;
 
 app.listen(port, () => {
