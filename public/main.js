@@ -68,11 +68,11 @@ $(document).ready(function() {
             displayProgress();
 
         }
-        // if ($(this).attr('id')=='city-progress'){
-        //     progress.data('value', cityPercent);
-        //     displayProgress();
+        if ($(this).attr('id')=='city-progress'){
+            progress.data('value', cityPercent);
+            displayProgress();
 
-        // }
+        }
     });
 
 
