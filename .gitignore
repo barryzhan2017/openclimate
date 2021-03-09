@@ -2,5 +2,4 @@
 ./server.js
 ./TODO
 ./data/
-./controllers/*
 *.js
