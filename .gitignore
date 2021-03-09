@@ -1,0 +1,6 @@
+./config.env
+./server.js
+./TODO
+./data/
+./controllers/*
+*.js

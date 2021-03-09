@@ -17,13 +17,17 @@ block content
                        - break
                 div.row.row-top
                     div.col-lg-11.progress-column
-                      div.progress.progress-animation(data-value=`${percentage}`)
-                        div(class="progress-bar" role="progressbar" aria-valuenow=`${percentage}` style="width:0;" aria-valuemin="0" aria-valuemax="100")
+                      div.select-progress 
+                       a.progress-link.active#country-progress Country
+                       a.progress-link - 
+                       a.progress-link#state-progress State 
+                      div.progress.progress-animation(data-value=`${percentageCountry}` data-city=`${percentageMayor}` data-state=`${percentageGovernor}` data-country=`${percentageCountry}`)
+                        div(class="progress-bar" role="progressbar" aria-valuenow=`${percentageState}` style="width:0;" aria-valuemin="0" aria-valuemax="100")
                         h6 
                           strong
                             span.progress-difference 100% 
                             | away from target
-                    div.custom-tooltip ?
+                    div.custom-tooltip.center-tooltip ?
                       span.custom-tooltiptext
                         a(href="/") How do I compare to other places?
                 div.row.row-main
@@ -63,8 +67,8 @@ block content
                                   label Party: 
                                   span  #{contact.repParty}
                                 div
-                                  label Committee Assignment: 
-                                  span  #{contact.repCommitteeAssignment}
+                                  label.committee-label.toggle-text(data-initial-text='Show Committee Assignment &#9660;' data-hide-text='Hide Committee Assignment &#9650;' href="javascript:;") Show Committee Assignment &#9660;
+                                  span.committee-text  #{contact.repCommitteeAssignment}
                                 div
                                   label Office Room: 
                                   span  #{contact.repOfficeRoom}
@@ -116,8 +120,8 @@ block content
                                   label Party: 
                                   span  #{contact.senator1Party}
                                 div
-                                  label Committee Assignment: 
-                                  span  #{contact.senator1CommitteeAssignment}
+                                  label.committee-label.toggle-text(data-initial-text='Show Committee Assignment &#9660;' data-hide-text='Hide Committee Assignment &#9650;' href="javascript:;") Show Committee Assignment &#9660;
+                                  span.committee-text  #{contact.senator1CommitteeAssignment}
                                 div
                                   label Address: 
                                   span  #{contact.senator1Address}
@@ -165,8 +169,8 @@ block content
                                   label Party: 
                                   span  #{contact.senator2Party}
                                 div
-                                  label Committee Assignment: 
-                                  span  #{contact.senator2CommitteeAssignment}
+                                  label.committee-label.toggle-text(data-initial-text='Show Committee Assignment &#9660;' data-hide-text='Hide Committee Assignment &#9650;' href="javascript:;") Show Committee Assignment &#9660;
+                                  span.committee-text #{contact.senator2CommitteeAssignment}
                                 div
                                   label Address: 
                                   span  #{contact.senator2Address}
@@ -214,8 +218,8 @@ block content
                                   label Party: 
                                   span  #{contact.governorParty}
                                 div
-                                  label Committee Assignment: 
-                                  span  #{contact.governorCommitteeAssignment}
+                                  label.committee-label.toggle-text(data-initial-text='Show Committee Assignment &#9660;' data-hide-text='Hide Committee Assignment &#9650;' href="javascript:;") Show Committee Assignment &#9660;                                  
+                                  span.committee-text #{contact.governorCommitteeAssignment}
                                 div
                                   label Address: 
                                   span  #{contact.governorAddress}
