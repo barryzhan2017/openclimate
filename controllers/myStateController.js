@@ -9,11 +9,15 @@ exports.getStateData= async (req, res) => {
 
 
   try {
+
     states.forEach(async (state)=>{
       try {
-        let contact = await Contact.findOne({ state: state });
-        let governorTargetLeft = parseInt((contact.governorGHGCurrent - contact.governorGHGTarget) / contact.governorGHGCurrent * 100);
-        stateData[state] = governorTargetLeft;
+        let contact = await Contact.findOne({ state: state }).exec(function(err,info){
+          if (info){
+            let governorTargetLeft = parseInt((info.governorGHGCurrent - info.governorGHGTarget) / info.governorGHGCurrent * 100);
+            stateData[state] = governorTargetLeft;
+          }
+        });
 
       } catch {
         console.log(`A problem occurred finding data on ${state}`);
@@ -21,7 +25,7 @@ exports.getStateData= async (req, res) => {
 
     });
 
-    // stateData={'California':75, "Arizone":50, "New York":65}
+    // stateData['teststate']=85;
 
     res.status(200).render("myState", { 
       states: stateData, 
