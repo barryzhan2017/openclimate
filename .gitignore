@@ -3,3 +3,4 @@
 ./TODO
 ./data/
 ./node_modules/
+.DS_Store

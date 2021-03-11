@@ -19,7 +19,6 @@ mongoose
   .then(con => console.log('DB connection is successful.'));
 
 
-
 const read = async () => {
   const wb = xlsx.readFile("data.xlsx", {cellDates:true});
   console.log(wb.SheetNames);
