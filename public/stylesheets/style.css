@@ -512,6 +512,78 @@ border-color:#d9d9d9;
     color:#333 !important;
 }
 
+.state-selection {
+    background-color: transparent; /* Green */
+    border: 2px solid #3de2d2;
+    border-radius: 100px;
+    color: black;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Poppins;
+    font-size: 16px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.state-selection:hover {
+    border: 2px solid #1bb1a2
+}
+
+.state-selection.active {
+    background-color: #3de2d2; /* Green */
+}
+
+.state-progress{
+    height:30px;
+    display:block;
+}
+
+.state-column{
+    display:block;
+}
+.state-column.hidden{
+    display:none;
+}
+
+.state-progress-column{
+    font-size:16px;
+    max-width: 50%;
+}
+
+.state-section{
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:-5px;
+}
+
+.state-section .row{
+    padding-left:10px;
+}
+
+.state-section .col-lg-12{
+    margin-bottom:15px;
+}
+
+.state-section::before{
+    display: inline-block;
+    content: "";
+    border-top: 2px solid #333;
+    width: 100%;
+    margin: 10px 5px;
+    transform: translateY(-5px);
+}
+
+.states-list{
+    margin-top:15px;
+}
+
+.progress-bar.state-bar{
+    font-size:20px;
+    max-width: 50%;
+}
+
 .page-inner .container {
     height: auto;
 }
