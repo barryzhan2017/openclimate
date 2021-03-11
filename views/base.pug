@@ -21,15 +21,15 @@ block content
                        a.progress-link.active#country-progress Country
                        a.progress-link - 
                        a.progress-link#state-progress State 
-                      div.progress.progress-animation(data-value=`${percentageCountry}` data-state=`${percentageGovernor}` data-country=`${percentageCountry}`)
-                        div(class="progress-bar" role="progressbar" aria-valuenow=`${percentageState}` style="width:0;" aria-valuemin="0" aria-valuemax="100")
+                      div.progress.progress-animation(data-value=`${percentageCountry}` data-country=`${percentageCountry}` data-state=`${percentageGovernor}`)
+                        div(class="progress-bar" role="progressbar" aria-valuenow=`${percentageCountry}` style="width:0;" aria-valuemin="0" aria-valuemax="100")
                         h6 
                           strong
                             span.progress-difference 100% 
                             | away from target
                     div.custom-tooltip.center-tooltip ?
                       span.custom-tooltiptext
-                        a(href="/") How do I compare to other places?
+                        a(href="/myState") How do I compare to other places?
                 div.row.row-main
                   div.col-lg-6
                     h2.page-title Who's in charge?

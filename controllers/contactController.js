@@ -5,23 +5,32 @@ const Contact = require("./../models/contactModel");
 exports.getContactsByZipCode = async (req, res) => {
   try {
     const contact = await Contact.find({ zipCode: req.body.zipCode });
-    // const contact=[{zipCode:'94087', city:'Sunnyvale', county:'', state:'California'}]
+    // const contact=[{zipCode:'94087', city:'Sunnyvale', county:'', state:'California', countryGHGCurrent:75, countryGHGTarget:15}];
     //percentage calc
     let percentageCountry = 0;
     let percentageGovernor = 0;
-    let percentageMayor = 0;
+    let targetLeft=0;
+    let governorTargetLeft=0;
 
     if (contact.length > 0) {
-      const targetLeft = parseInt((contact[0].countryGHGCurrent - contact[0].countryGHGTarget) / contact[0].countryGHGCurrent * 100);
-      const governorTargetLeft = parseInt((contact[0].governorGHGCurrent - contact[0].governorGHGTarget) / contact[0].governorGHGCurrent * 100);
-      // const mayorTargetLeft = parseInt((contact[0].mayorGHGCurrent - contact[0].mayorGHGTarget) / contact[0].mayorGHGCurrent * 100);
-      // const targetLeft = 10;
-      // const governorTargetLeft = 15;
-      // const mayorTargetLeft = 20;
+      try { 
+        const targetLeft = parseInt((contact[0].countryGHGCurrent - contact[0].countryGHGTarget) / contact[0].countryGHGCurrent * 100);
+        if (targetLeft){
+          percentageCountry = 100 - targetLeft;
+        }
+      } catch {
+        console.log("Couldn't load country GHG data");
+      }
 
+      try{
+        const governorTargetLeft = parseInt((contact[0].governorGHGCurrent - contact[0].governorGHGTarget) / contact[0].governorGHGCurrent * 100);
+        if (governorTargetLeft){
+          percentageGovernor = 100 - governorTargetLeft;
+        }
+      } catch {
+        console.log("Couldn't load state GHG data");
+      }
 
-      percentageCountry = 100 - targetLeft;
-      percentageGovernor = 100 - governorTargetLeft;
       // percentageMayor = 100 - mayorTargetLeft;
 
       if(percentageCountry>100){
@@ -30,10 +39,6 @@ exports.getContactsByZipCode = async (req, res) => {
       if(percentageGovernor>100){
         percentageGovernor = 100;
       }
-      //  if(percentageMayor>100){
-      //   percentageMayor = 100;
-      // }
-
 
       res.status(200).render("base", { 
         data: contact, 

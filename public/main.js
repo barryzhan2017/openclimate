@@ -22,35 +22,47 @@ $(document).ready(function() {
     $('.btn-test').click(function(){
         $(this).hide();
         $('.panel-search').addClass("visible");
-    });    
+    });   
+
+
+    $('.state-selection').click(function(){
+        let state = $(this).data('value');
+        let id=`${state.replace(/\s/g, '')}Column`;
+        $(`#${id}`).toggleClass('hidden');
+    });     
+
+
+    $('.state-progress').each(function(i, obj) {
+        let currentValue = $(this).data("value");
+        let progressBar = $(this).children(".progress-bar");
+        let remaning = $(this).find("h6 strong span");
+        progressBar.css("width", currentValue+"%");
+        progressBar.text(currentValue + "% ");
+        remaning.text((100-currentValue)+ "% ");
+    });
     
     const progress = $('.progress-animation');
 
-    function displayProgress (inputfld, boundfld) {
-        if(progress){
-            const currentValue = progress.data("value");
-            let counter = 0;
-            const progressBar = progress.children(".progress-bar");
-            const remaning = progress.find("h6 strong span");
-            const interval = setInterval(function(){
-                progressBar.css("width", counter+"%");
-                progressBar.text(counter + "% ");
-                remaning.text((100-counter)+ "% ");
-                if(counter===currentValue){
-                    clearInterval(interval);
-                }
-                counter++;
-            },COUNTER_INTERVAL_TIME);
-        }
-    }
-    
-    displayProgress();
+    if(progress){
+        let currentValue = progress.data("value");
+        let counter = 0;
+        let progressBar = progress.children(".progress-bar");
+        let remaning = progress.find("h6 strong span");
+        let interval = setInterval(function(){
+            progressBar.css("width", counter+"%");
+            progressBar.text(counter + "% ");
+            remaning.text((100-counter)+ "% ");
+            if(counter===currentValue){
+                clearInterval(interval);
+            }
+            counter++;
+        },COUNTER_INTERVAL_TIME);
+    }   
     
 
     // click progress bar- change active class. load city/state/country, change aria-value and data-value
     // 
     $('.progress-link').click(function(){
-        cityPercent = progress.data("city")
         statePercent = progress.data("state")
         countryPercent = progress.data("country")
 
@@ -60,19 +72,37 @@ $(document).ready(function() {
         $(this).addClass('active');
         if ($(this).attr('id')=='country-progress'){
             progress.data('value', countryPercent);
-            displayProgress();
-
+            let currentValue = progress.data("value");
+            let counter = 0;
+            let progressBar = progress.children(".progress-bar");
+            let remaning = progress.find("h6 strong span");
+            let interval = setInterval(function(){
+                progressBar.css("width", counter+"%");
+                progressBar.text(counter + "% ");
+                remaning.text((100-counter)+ "% ");
+                if(counter===currentValue){
+                    clearInterval(interval);
+                }
+                counter++;
+            },COUNTER_INTERVAL_TIME);
         }
         if ($(this).attr('id')=='state-progress'){
             progress.data('value', statePercent);
-            displayProgress();
-
+            let currentValue = progress.data("value");
+            let counter = 0;
+            let progressBar = progress.children(".progress-bar");
+            let remaning = progress.find("h6 strong span");
+            let interval = setInterval(function(){
+                progressBar.css("width", counter+"%");
+                progressBar.text(counter + "% ");
+                remaning.text((100-counter)+ "% ");
+                if(counter===currentValue){
+                    clearInterval(interval);
+                }
+                counter++;
+            },COUNTER_INTERVAL_TIME);
         }
-        // if ($(this).attr('id')=='city-progress'){
-        //     progress.data('value', cityPercent);
-        //     displayProgress();
 
-        // }
     });
 
 

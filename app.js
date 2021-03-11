@@ -19,12 +19,12 @@ app.use(express.json());
 
 const indexRouter = require('./routes/index');
 const contactRouter = require("./routes/contactRoutes");
+const stateRouter = require("./routes/stateRoutes");
 
 app.use('/public', express.static('public'))
 app.use('/', indexRouter);
 app.use('/api/v1/contact', contactRouter);
-
-
+app.use('/myState', stateRouter);
 
 //start server
 module.exports = app;
