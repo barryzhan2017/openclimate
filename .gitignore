@@ -1,5 +1,5 @@
 ./config.env
-./server.js
+server.js
 ./TODO
 ./data/
 .DS_Store

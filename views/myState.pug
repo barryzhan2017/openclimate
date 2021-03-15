@@ -1,18 +1,56 @@
 extends layout
 
 block content
-	include inner
-	div.page-inner
-		div.container
+	div#my-state-page
+		div.navbar-wrapper  
+			div.container
+				nav.navbar.navbar-expand-lg.navbar-light
+					a(class="navbar-brand" href="/") 
+						img(class="logo" src="../../public/images/Logo_white.png")
+					button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+						span.navbar-toggler-icon
+					div.collapse.navbar-collapse#navbarSupportedContent
+						div.close-menu-mobile
+							div.menu-opened-logo
+								img(src="../../public/images/logo-menu-mobile.png")
+							div.menu-opened-close
+								img(src="../../public/images/close.png")
+						ul.navbar-nav.mr-auto
+							li.nav-item
+								a(class=`nav-link ${path=='/about'?'active':''}` href="/about") About
+							li.nav-item
+								a(class=`nav-link ${path=='/myState'?'active':''}` href="/myState") My State                       
+							li.nav-item
+								a(class=`nav-link ${path=='/submit-bug'?'active':''}` href="/submit-bug") Submit bug
+							li.nav-item
+								a(class=`nav-link ${path=='/question-answers'?'active':''}` href="/question-answers") Q&A
+							li.nav-item
+								a(class=`nav-link ${path=='#'?'active':''}` href="mailto:climatereps@gmail.com") Contact
+						form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")
+							div(class="div-input")
+								#error
+								if error
+									p.text-danger Zip code not found!
+								input(type="number" class="input" name="zipCode" id="input"  placeholder="Enter your zip code" required autofocus)
+							div(class="div-input")           
+								button(type="submit" class="home-submit-button") GO
+							div(class="top-bar-icon-lang index-lang dropdown")         
+								button(class="dropdown-toggle" type="button" data-toggle="dropdown") ENG
+									span.caret
+									ul.dropdown-menu
+										li
+											a(href="#") ENG  
+		div.page-inner-state
 			div.main-wrapper
 				div.row.row-top
 					div.col-lg-6
 						img.mb-3(src="../public/images/state-icon.png")
-						h4.mb-0 How's my state doing?
+						h4.mb-0 How's my 
+							b state doing?
 				div.row.row-main.state-section
 					div.col-lg-12
 						div
-							div.row 
+							div.row.state-text 
 								i Select one or serveral states you want to see or compare by clicking on them:
 
 							div.row.states-list
@@ -24,7 +62,7 @@ block content
 						div.col-lg-12.state-column.hidden(id=`${state.replace(/\s/g, '')}Column`)
 							div.row.row-top
 								div.col-lg-12
-								h3 #{state}	
+								h3.state-title #{state}	
 							div.row.row-top
 								div.col-lg-12.state-progress-column
 									div.progress.state-progress(data-value=`${value}`)
@@ -32,9 +70,7 @@ block content
 										h6 
 											strong
 												span.progress-difference 100% 
-												| away from target
-				div #{JSON.stringify(states)}
-
+												| away
 
 		include ../components/search
 		include ../components/footer

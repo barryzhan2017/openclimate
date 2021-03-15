@@ -220,10 +220,6 @@ form.form-signin.form-inline {
     margin:0 auto;
 }
 
-.main-wrapper{
-
-}
-
 .main-wrapper h3{
     font-family: Poppins;
     font-size: 15px;
@@ -285,13 +281,44 @@ form.form-signin.form-inline {
     color: #fff;
 }
 
-
 .page-inner{
-background-image: none;
-background-color: #fff;
+    background-image: none;
+    background-color: #fff;
     margin-top:60px;
 }
 
+.page-inner-state{
+    display:block;
+    width:100%;
+    color:#bbb;
+    background-image: none;
+    background-color: #000;
+    margin-top:60px;
+    padding-left:60px;
+    padding-right:60px;
+}
+
+.page-inner-state h4 {
+    color:#b5b5b5 !important;
+    font-size:30px !important;
+    margin-top:30px;
+    font-weight:normal !important;
+}
+
+.page-inner-state h6 {
+    color:black;
+
+}
+
+.page-inner-state h4 b {
+    color:#fff;
+    font-size:30px;
+    font-weight:semi-bold;
+}
+
+.page-inner-state div {
+
+}
 
 .navbar-inner{
     
@@ -490,6 +517,10 @@ border-color:#d9d9d9;
     transition: width .1s ease;
 }
 
+.state-progress .porgress-bar {
+    opacity:.9;
+}
+
 .select-progress{
     width:100%;
     padding-bottom:10px;
@@ -512,11 +543,21 @@ border-color:#d9d9d9;
     color:#333 !important;
 }
 
+#my-state-page{
+    background:black;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
 .state-selection {
-    background-color: transparent; /* Green */
-    border: 2px solid #3de2d2;
+    background-color: #bbb; /* Green */
+    border: none;
     border-radius: 100px;
-    color: black;
+    color: #fff;
     padding: 5px 20px;
     text-align: center;
     text-decoration: none;
@@ -528,16 +569,21 @@ border-color:#d9d9d9;
 }
 
 .state-selection:hover {
-    border: 2px solid #1bb1a2
+    background-color: #999; /* Green */
 }
 
 .state-selection.active {
     background-color: #3de2d2; /* Green */
 }
 
+
 .state-progress{
     height:30px;
     display:block;
+}
+
+.state-title{
+    color:white !important;
 }
 
 .state-column{
@@ -1082,6 +1128,8 @@ footer{
     .main-wrapper {
         padding-top: 60px;
         padding-bottom: 60px;
+        padding-left:15px;
+        padding-right:15px;
     }
     .page-wrapper {
         min-height: 100vh;
@@ -1192,19 +1240,28 @@ footer{
         margin-left: 45px;
 
     }
+
     .page-inner {
         margin-top: 0px;
     }
+
     .item-data p {
         word-break: break-all;
     }
+
     .progress h6 {
         font-size: 16px;
         margin-left: 15px;
     }
+
     .progress-bar {
         font-size: 16px;
     }
+
+    .state-progress .progress-bar {
+        font-size: 20px;
+    }
+
     .navbar-wrapper.nw-inner {
         padding-top: 0;
     }

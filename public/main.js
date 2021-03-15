@@ -26,6 +26,7 @@ $(document).ready(function() {
 
 
     $('.state-selection').click(function(){
+        $(this).toggleClass("active");
         let state = $(this).data('value');
         let id=`${state.replace(/\s/g, '')}Column`;
         $(`#${id}`).toggleClass('hidden');
