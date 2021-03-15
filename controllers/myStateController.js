@@ -15,7 +15,7 @@ exports.getStateData= async (req, res) => {
         Contact.findOne({ state: state }).exec(function(err,info){
           if (info){
             let governorTargetLeft = parseInt((info.governorGHGCurrent - info.governorGHGTarget) / info.governorGHGCurrent * 100);
-            stateData[state] = governorTargetLeft;
+            stateData[state] = 100-governorTargetLeft;
           }
           count++;
           if (count===stateArray.length || count>51){
