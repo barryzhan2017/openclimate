@@ -1,7 +1,6 @@
 extends layout
 
 block content
-	-console.log(!{JSON.stringify(state})
 	include inner
 	div.page-inner
 		div.container
@@ -34,6 +33,8 @@ block content
 											strong
 												span.progress-difference 100% 
 												| away from target
+				div
+					#{JSON.stringify(state)}
 
 		include ../components/search
 		include ../components/footer
