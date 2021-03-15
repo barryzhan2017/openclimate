@@ -10,15 +10,15 @@ exports.getStateData= async (req, res) => {
 
   try {
 
-     stateArray.forEach(async (state)=>{
+     stateArray.forEach((state)=>{
       try {
-        let contact = await Contact.findOne({ state: state }).exec(function(err,info){
+        Contact.findOne({ state: state }).exec(function(err,info){
           if (info){
             let governorTargetLeft = parseInt((info.governorGHGCurrent - info.governorGHGTarget) / info.governorGHGCurrent * 100);
             stateData[state] = governorTargetLeft;
           }
           count++;
-          if (count===stateArray.lenght){
+          if (count===stateArray.length || count>51){
             res.status(200).render("myState", { 
               states: stateData, 
               searchImagePath: "../../public/images/my-state-search.png"

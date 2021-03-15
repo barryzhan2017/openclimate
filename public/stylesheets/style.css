@@ -1112,9 +1112,9 @@ footer{
     .navbar-expand-lg .navbar-collapse {
         margin-top: 0px;
         background: #000;
-        position: fixed;
+        position: absolute;
         top: 0;
-        left: 0;
+        left: -15px;
         min-height: 100vh;
         margin-right: -15px;
         width: 100vw;
