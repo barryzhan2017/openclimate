@@ -1,5 +1,5 @@
 const Contact = require("./../models/contactModel");
-const states = require("../stateData"); 
+const states = require("./stateData"); 
 
 exports.getStateData= async (req, res) => {
 

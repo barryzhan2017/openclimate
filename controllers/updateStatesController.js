@@ -1,5 +1,5 @@
 const Contact = require("./../models/contactModel");
-let stateData = require("../stateData"); 
+let stateData = require("./stateData"); 
 const fs = require('fs');
 
 exports.updateData= async (req, res) => {
@@ -28,12 +28,19 @@ exports.updateData= async (req, res) => {
       } catch (err) {
         console.log(err);
       }
-
+      // stateData[state]=50;
+      // count++;
+      // if (count===stateArray.length){
+      //   fs.writeFileSync("./controllers/stateData.json", JSON.stringify(stateData));
+      //   res.status(200).render("myState", { 
+      //     states: stateData, 
+      //     searchImagePath: "../../public/images/my-state-search.png"
+      //   });
+      // }
     });
-    // stateData['teststate']=85;
 
   } catch (err) {
-
+    console.log(err);
     res.status(404).json({
       status: "fail",
       message: err
