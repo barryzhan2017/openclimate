@@ -27,6 +27,7 @@ exports.updateData= async (req, res) => {
         });
       } catch (err) {
         console.log(err);
+        count++;
       }
       // stateData[state]=50;
       // count++;
