@@ -18,7 +18,7 @@ exports.updateData= async (req, res) => {
           }
           count++;
           if (count===stateArray.length || count>51){
-            fs.writeFileSync("stateData.json", JSON.stringify(stateData));
+            fs.writeFileSync("./controllers/stateData.json", JSON.stringify(stateData));
             res.status(200).render("myState", { 
               states: stateData, 
               searchImagePath: "../../public/images/my-state-search.png"
