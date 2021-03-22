@@ -1,5 +1,5 @@
 const Contact = require("./../models/contactModel");
-let states = require("./stateData"); 
+let stateData = require("./stateData"); 
 
 exports.updateData= async (req, res) => {
 
@@ -13,16 +13,13 @@ exports.updateData= async (req, res) => {
         Contact.findOne({ state: state }).exec(function(err,info){
           if (info){
             let governorTargetLeft = parseInt((info.governorGHGCurrent - info.governorGHGTarget) / info.governorGHGCurrent * 100);
-            states[state] = 100-governorTargetLeft;
+            stateData[state] = 100-governorTargetLeft;
           }
           count++;
           if (count===stateArray.length || count>51){
-            fs.writeFile("stateData.json", JSON.stringify(states), err => { 
-              if (err) throw err;   
-              console.log("Updated State Data"); // Success 
-            });
+            fs.writeFileSync("stateData.json", JSON.stringify(stateData));
             res.status(200).render("myState", { 
-              states: states, 
+              states: stateData, 
               searchImagePath: "../../public/images/my-state-search.png"
             });
           }
