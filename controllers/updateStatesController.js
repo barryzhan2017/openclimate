@@ -1,5 +1,6 @@
 const Contact = require("./../models/contactModel");
 let stateData = require("./stateData"); 
+const fs = require('fs');
 
 exports.updateData= async (req, res) => {
 
@@ -24,9 +25,8 @@ exports.updateData= async (req, res) => {
             });
           }
         });
-
-      } catch {
-        console.log(`A problem occurred finding data on ${state}`);
+      } catch (err) {
+        console.log(err);
       }
 
     });
