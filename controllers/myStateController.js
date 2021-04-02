@@ -28,6 +28,7 @@ exports.getStateData= async (req, res) => {
             }
             res.status(200).render("myState", { 
               states: stateData, 
+              stateGoal:stateGoal,
               searchImagePath: "../../public/images/my-state-search.png"
             });
           }
