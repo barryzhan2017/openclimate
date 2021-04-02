@@ -106,6 +106,10 @@ $(document).ready(function() {
 
     });
 
+    $(".show-country-goal").click(function() {
+        document.getElementById("UnitedStatesColumn").scrollIntoView({behavior: "smooth", block: "center"});
+
+    });
 
 
 });

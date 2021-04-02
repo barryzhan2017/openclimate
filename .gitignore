@@ -3,3 +3,5 @@
 ./TODO
 ./data/
 .DS_Store
+*.xlsx
+.idea

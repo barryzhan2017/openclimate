@@ -51,7 +51,7 @@ block content
 					div.col-lg-12
 						div
 							div.row.state-text 
-								i Select one or serveral states you want to see or compare by clicking on them:
+								i Select one or serveral states to see how close they are on reaching their emissions goals:
 
 							div.row.states-list
 								div.col-lg-12
@@ -62,15 +62,40 @@ block content
 						div.col-lg-12.state-column.hidden(id=`${state.replace(/\s/g, '')}Column`)
 							div.row.row-top
 								div.col-lg-12
-								h3.state-title #{state}	
+								h2.state-title #{state}	
 							div.row.row-top
-								div.col-lg-12.state-progress-column
+								div.col-lg-8.state-progress-column
 									div.progress.state-progress(data-value=`${value}`)
 										div(class="progress-bar" role="progressbar" aria-valuenow=`${value}` style="width:0;" aria-valuemin="0" aria-valuemax="100")
 										h6 
 											strong
 												span.progress-difference 100% 
 												| away
+								div.col-lg-4
+									button.show-country-goal Compare to US
+							div.row.state-goal
+								b #{stateGoal[state]}% reduction&nbsp
+								div in GHGs&nbsp 
+								b by 2030&nbsp 
+								div from current levels											
 
+				div.row.state-section
+					div.col-lg-12.state-column(id="UnitedStatesColumn")
+						div.row.row-top
+							div.col-lg-12
+							h3.state-title #{"United States"}	
+						div.row.row-top
+							div.col-lg-12.state-progress-column
+								div.progress.state-progress(data-value=`${states['US']}`)
+									div(class="progress-bar" role="progressbar" aria-valuenow=`${states['US']}` style="width:0;" aria-valuemin="0" aria-valuemax="100")
+									h6 
+										strong
+											span.progress-difference 100% 
+											| away
+						div.row.state-goal
+							b #{stateGoal['US']}% reduction&nbsp
+							div in GHGs&nbsp 
+							b by 2030&nbsp 
+							div from current levels											
 		include ../components/search
 		include ../components/footer

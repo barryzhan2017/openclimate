@@ -43,7 +43,8 @@ block content
       div.container  
             div.main-wrapper
                 div
-                    h3 WHAT IS THIS?
+                  div.index-left-column
+                    h3 WHO ARE WE?
                     h1 
                        span ClimateReps.com 
                        | is the first 
@@ -60,23 +61,25 @@ block content
                       img(src="../../public/images/arrow.png") 
                       |  TEST IT
                       span  now
-                    div.panel-search
-                      form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")                          
-                        div(class="pl-2 pr-2 div-input")
-                            label.labelsmall Enter your Zip Code:
-                            #error
-                            if error
-                                p.text-danger Zip code not found!
-                            input(type="number" class="input" name="zipCode" id="input"  required autofocus)
-                        div(class="pl-2 pr-2 top-bar-icon-country dropdown")
-                            label.labelsmall Select your country:
-                            button(class="dropdown-toggle" type="button" data-toggle="dropdown")
-                                span United States 
-                                img(src="../../public/images/flag-us.svg")
-                                span.caret
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#") 
-                                            img(src="../../public/images/flag-us.svg")
-                        div(class="pl-2 pr-2 div-input")
-                            button(type="submit" class="index-submit-button") → Find your reps
+                  div.index-right-column
+                    img.index-image(src="../../public/images/home_new2.png")
+                  div.panel-search
+                    form(class="form-signin form-inline my-2 my-lg-0" method="POST" action="/api/v1/contact")                          
+                      div(class="pl-2 pr-2 div-input")
+                          label.labelsmall Enter your Zip Code:
+                          #error
+                          if error
+                              p.text-danger Zip code not found!
+                          input(type="number" class="input" name="zipCode" id="input"  required autofocus)
+                      div(class="pl-2 pr-2 top-bar-icon-country dropdown")
+                          label.labelsmall Select your country:
+                          button(class="dropdown-toggle" type="button" data-toggle="dropdown")
+                              span United States 
+                              img(src="../../public/images/flag-us.svg")
+                              span.caret
+                              ul.dropdown-menu
+                                  li
+                                      a(href="#") 
+                                          img(src="../../public/images/flag-us.svg")
+                      div(class="pl-2 pr-2 div-input")
+                          button(type="submit" class="index-submit-button") → Find your reps
