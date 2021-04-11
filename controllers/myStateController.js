@@ -17,6 +17,7 @@ exports.getStateData= async (req, res) => {
             stateGoal[state] = parseInt((info.governorGHGCurrent-info.governorGHGTarget)/info.governorGHGCurrent *100);
           }
           count++;
+
           if (count===stateArray.length || count>51){
             try{ 
               stateData['US']=100-parseInt((info.countryGHGCurrent - info.countryGHGTarget) / info.countryGHGCurrent * 100);

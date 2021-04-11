@@ -78,9 +78,9 @@ nav input.input{
     height:32px;
     border:1px solid #fefefe;
     background-color: transparent;
+    color:#fefefe;
     padding-left: 20px;
     padding-right: 20px;
-    color:#fefefe;
     font-size: 13px;
     font-family: Poppins;
     width: 200px;
@@ -93,7 +93,6 @@ nav input.input:focus {
     height: 32px;
     border: 1px solid #fefefe;
     background-color: transparent;
-    color:#fefefe;
     font-size: 13px;
     font-family: Poppins;
     /*outline: none;*/
@@ -132,8 +131,8 @@ nav input.input:focus {
 }
 
 .ninner{
-padding-top:0px;
-padding-bottom:40px;
+    padding-top:0px;
+    padding-bottom:40px;
 }
 
 .ninner .navbar-brand{
@@ -757,11 +756,11 @@ color:#000;
 }
 
 .navbar-inner input {
-    color: #000!important;
+    color: #000 !important;
 }
 
 .navbar-inner .top-bar-icon-country button {
-    color: #000!important;
+    color: #000 !important;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -774,6 +773,16 @@ color:#000;
     background-size: cover;
     height: 0;
     padding-bottom: 200px;
+    /*margin-bottom: 30px;*/
+}
+
+.my-zip-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    padding-top:30px;
+    padding-bottom: 30px;
     /*margin-bottom: 30px;*/
 }
 
@@ -1254,8 +1263,12 @@ footer{
     .navbar-nav {
         border-right: 0;
         height: auto;
-        padding-top: 0;
+        padding-top: 60px;
         padding-right: 0;
+    }
+
+    nav input.input{
+        color:#fefefe;
     }
 
     .top-bar-icon-country.dropdown {
@@ -1301,9 +1314,7 @@ footer{
         font-size: 35px;
         margin-bottom: 20px;
     }
-    .navbar-nav {
-        padding-top: 60px;
-        }
+
     .page-wrapper {
         height: auto;
     }
@@ -1427,15 +1438,45 @@ footer{
     .third-order{
         order: 3;
     }
+    .navbar-inner input {
+        color: #fefefe !important;
+    }
+
 }    
 
-@media screen and (max-width:350px){
-.main-wrapper h1 {
-    font-size: 28px;
-    line-height: 38px;
-    margin-bottom: 28px;
-}
-.navbar-brand {
-    padding-right: 0;
-}
+@media screen and (max-width:492px){
+    .main-wrapper h1 {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 28px;
+    }
+    .navbar-inner input {
+        color: #fff;
+    }
+    .index-image {
+        display:none;
+/*        height:110px;
+        margin-top:-30px;*/
+    }
+    .navbar-brand {
+        padding-right: 0;
+    }
+    .my-zip-img{
+        object-fit:cover;
+        height:120px;
+        width:100%;
+        overflow:hidden;
+        padding-bottom:0px;
+        padding-top:15px;
+    }
+    .state-progress-column{
+        max-width:100%;
+    }
+    .progress{
+        margin-left: 0px;
+    }
+    .page-inner-state{
+        padding-left:15px;
+        padding-right:15px;
+    }
 }
