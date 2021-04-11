@@ -9,48 +9,52 @@ exports.getStateData= async (req, res) => {
   try {
 
     stateArray.forEach((state)=>{
-      // try {
-      //   Contact.findOne({ state: state }).exec(function(err,info){
-      //     if (info){
-      //       let governorTargetLeft = parseInt((info.governorGHGCurrent - info.governorGHGTarget) / info.governorGHGCurrent * 100);
-      //       stateData[state] = 100-governorTargetLeft;
-      //       stateGoal[state] = parseInt((info.governorGHGCurrent-info.governorGHGTarget)/info.governorGHGCurrent *100);
-      //     }
-      //     count++;
+      try {
+        Contact.findOne({ state: state }).exec(function(err,info){
+          if (err){
+            count++;
+          } else {
+            if (info){
+              let governorTargetLeft = parseInt((info.governorGHGCurrent - info.governorGHGTarget) / info.governorGHGCurrent * 100);
+              stateData[state] = 100-governorTargetLeft;
+              stateGoal[state] = parseInt((info.governorGHGCurrent-info.governorGHGTarget)/info.governorGHGCurrent *100);
+            }
+            count++;
 
-      //     if (count===stateArray.length || count>51){
-      //       try{ 
-      //         stateData['US']=100-parseInt((info.countryGHGCurrent - info.countryGHGTarget) / info.countryGHGCurrent * 100);
-      //         stateGoal['US'] = parseInt((info.countryGHGCurrent-info.countryGHGTarget)/info.countryGHGCurrent *100);
-      //       } catch (err) {
-      //         // console.log(err);
-      //         stateData['US']=0;
-      //         stateGoal['US']=0;
-      //       }
-      //       res.status(200).render("myState", { 
-      //         states: stateData, 
-      //         stateGoal:stateGoal,
-      //         searchImagePath: "../../public/images/my-state-search.png"
-      //       });
-      //     }
-      //   });
-      // } catch (err) {
-      //   // console.log(err);
-      //   count++;
-      // }
-
-      stateData[state]=50;
-      stateGoal[state]=100;
-      count++;
-      if (count===stateArray.length){
-        stateData['US'] = 70;
-        stateGoal['US'] = 70;
-        res.status(200).render("myState", { 
-          states: stateData, 
-          stateGoal:stateGoal,
-          searchImagePath: "../../public/images/my-state-search.png"
+            if (count===stateArray.length || count>51){
+              try{ 
+                stateData['US']=100-parseInt((info.countryGHGCurrent - info.countryGHGTarget) / info.countryGHGCurrent * 100);
+                stateGoal['US'] = parseInt((info.countryGHGCurrent-info.countryGHGTarget)/info.countryGHGCurrent *100);
+              } catch (err) {
+                // console.log(err);
+                stateData['US']=0;
+                stateGoal['US']=0;
+              }
+              res.status(200).render("myState", { 
+                states: stateData, 
+                stateGoal:stateGoal,
+                searchImagePath: "../../public/images/my-state-search.png"
+              });
+            }
+          }
         });
+      } catch (err) {
+        // console.log(err);
+        count++;
       }
+
+      // stateData[state]=50;
+      // stateGoal[state]=100;
+      // count++;
+      // if (count===stateArray.length){
+      //   stateData['US'] = 70;
+      //   stateGoal['US'] = 70;
+      //   res.status(200).render("myState", { 
+      //     states: stateData, 
+      //     stateGoal:stateGoal,
+      //     searchImagePath: "../../public/images/my-state-search.png"
+      //   });
+      // }
 
     });
 
