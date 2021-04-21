@@ -1445,6 +1445,9 @@ footer{
 }    
 
 @media screen and (max-width:492px){
+    .contacts a {
+        margin-right:30px;
+    }
     .main-wrapper h1 {
         font-size: 28px;
         line-height: 38px;
@@ -1454,9 +1457,9 @@ footer{
         color: #fff;
     }
     .index-image {
-        display:none;
-/*        height:110px;
-        margin-top:-30px;*/
+        /*display:none;*/
+        height:110px;
+        margin-top:-30px;
     }
     .navbar-brand {
         padding-right: 0;
